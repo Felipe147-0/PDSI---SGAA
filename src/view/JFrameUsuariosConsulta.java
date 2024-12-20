@@ -4,17 +4,47 @@
  */
 package view;
 
+import controller.LogTrack;
+import controller.ResultSetTableModel;
+import java.sql.SQLException;
+import static java.util.Locale.filter;
+import javax.swing.RowFilter;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
+import model.Usuarios;
+
 /**
  *
  * @author felip
  */
 public class JFrameUsuariosConsulta extends javax.swing.JFrame {
 
+    private Usuarios usuarios;
+    private boolean disconnectOnClose;    
+    private boolean selection;
+    
+    private String query = "SELECT id as ID, nome as Nome, login as login, senha as senha, tipo_usuario as tipo_usuario FROM usuarios";
+    
+    private ResultSetTableModel result;
+    private final TableRowSorter< TableModel > filter;
     /**
-     * Creates new form JFrameUsuariosConsulta
+     * Creates new form JFrameUsuarios
      */
-    public JFrameUsuariosConsulta() {
+    public JFrameUsuariosConsulta(Usuarios usuarios, boolean disconnectOnClose,  boolean selection) throws SQLException {
         initComponents();
+        
+        this.usuarios = usuarios;
+        this.disconnectOnClose = disconnectOnClose;
+        
+        this.selection = selection;
+        jButtonSelecionar.setEnabled( this.selection );
+        
+         result = new ResultSetTableModel(query);
+        jTableConsulta.setModel(result);
+        
+        filter = new TableRowSorter<>(result);
+        jTableConsulta.setRowSorter(filter);
+        
     }
 
     /**
@@ -26,21 +56,206 @@ public class JFrameUsuariosConsulta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jButtonSelecionar = new javax.swing.JButton();
+        jButtonAlterar = new javax.swing.JButton();
+        jButtonAdicionar = new javax.swing.JButton();
+        jButtonFiltrar = new javax.swing.JButton();
+        jTextFieldFiltro = new javax.swing.JTextField();
+        jLabelFiltro = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableConsulta = new javax.swing.JTable();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Consulta Usuarios");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
+
+        jButtonSelecionar.setText("Selecionar");
+        jButtonSelecionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSelecionarActionPerformed(evt);
+            }
+        });
+
+        jButtonAlterar.setText("Alterar");
+        jButtonAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAlterarActionPerformed(evt);
+            }
+        });
+
+        jButtonAdicionar.setText("Adicionar");
+        jButtonAdicionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAdicionarActionPerformed(evt);
+            }
+        });
+
+        jButtonFiltrar.setText("Filtrar");
+        jButtonFiltrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFiltrarActionPerformed(evt);
+            }
+        });
+
+        jLabelFiltro.setText("Filtro:");
+
+        jTableConsulta.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTableConsulta);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabelFiltro)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonFiltrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 798, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonAdicionar)
+                    .addComponent(jButtonAlterar)
+                    .addComponent(jButtonSelecionar)
+                    .addComponent(jButtonFiltrar)
+                    .addComponent(jTextFieldFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelFiltro))
+                .addGap(31, 31, 31))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+        if( disconnectOnClose ) {
+            System.out.println("Descontectar BD.");
+            try {
+                result.disconnectFromDatabase();
+            } catch(SQLException ex) {
+                LogTrack.getInstance().adicionarLog(ex, true, this);
+            }
+        }
+    }//GEN-LAST:event_formWindowClosing
+
+    private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarActionPerformed
+        // TODO add your handling code here:
+
+        int row = jTableConsulta.getSelectedRow();
+        if( row != -1 ) {
+
+            System.out.println("Alterar.");
+
+            int id = (int) jTableConsulta.getValueAt(row, 0);
+
+            Usuarios usuarios = new Usuarios();
+            usuarios.setId(id);
+
+            try {
+
+                usuarios.load();
+
+                JFrameUsuariosCRUD jFrameCRUD;
+                // a janela jFrameCRUD irá alterar o objeto persistente usuario
+                jFrameCRUD = new JFrameUsuariosCRUD( usuarios, false );
+
+                jFrameCRUD.addWindowListener( new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosed(java.awt.event.WindowEvent evt) {
+                        try {
+                            System.out.println("Atualizar JTable.");
+                            result.setQuery(query);
+                        } catch( SQLException ex ) {
+                            LogTrack.getInstance().adicionarLog(ex, true, null);
+                        }
+                    }
+                } );
+
+                jFrameCRUD.setVisible(true);
+
+            } catch(Exception ex) {
+                LogTrack.getInstance().adicionarLog(ex, true, this);
+            }
+
+        }
+    }//GEN-LAST:event_jButtonAlterarActionPerformed
+
+    private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
+        // TODO add your handling code here:
+        try {
+
+            JFrameUsuariosCRUD jFrameCRUD;
+            // null porque o objeto persistente ainda não existe
+            jFrameCRUD = new JFrameUsuariosCRUD( null, false );
+
+            jFrameCRUD.addWindowListener( new java.awt.event.WindowAdapter() {
+                @Override
+                public void windowClosed(java.awt.event.WindowEvent evt) {
+                    try {
+                        System.out.println("Atualizar JTable.");
+                        result.setQuery(query);
+                    } catch( SQLException ex ) {
+                        LogTrack.getInstance().adicionarLog(ex, true, null);
+                    }
+                }
+            } );
+
+            jFrameCRUD.setVisible(true);
+
+        } catch( Exception ex ) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+    }//GEN-LAST:event_jButtonAdicionarActionPerformed
+
+    private void jButtonSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSelecionarActionPerformed
+
+    private void jButtonFiltrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFiltrarActionPerformed
+        // TODO add your handling code here:
+        System.out.println("Filtrar.");
+
+        String padrao = jTextFieldFiltro.getText();
+        if( padrao.isEmpty() ) {
+            filter.setRowFilter(null);
+        } else {
+            filter.setRowFilter( RowFilter.regexFilter( padrao ) );
+        }
+    }//GEN-LAST:event_jButtonFiltrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -68,15 +283,28 @@ public class JFrameUsuariosConsulta extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(JFrameUsuariosConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFrameUsuariosConsulta().setVisible(true);
+               try {
+                    new JFrameUsuariosConsulta( null, true, false ).setVisible(true);
+                } catch ( Exception ex ) {
+                    LogTrack.getInstance().adicionarLog( ex, true, null );
+                }
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAdicionar;
+    private javax.swing.JButton jButtonAlterar;
+    private javax.swing.JButton jButtonFiltrar;
+    private javax.swing.JButton jButtonSelecionar;
+    private javax.swing.JLabel jLabelFiltro;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableConsulta;
+    private javax.swing.JTextField jTextFieldFiltro;
     // End of variables declaration//GEN-END:variables
 }

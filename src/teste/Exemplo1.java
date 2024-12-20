@@ -36,9 +36,9 @@ public class Exemplo1 {
         // cria Statement para executar script SQL no banco de dados
         statement = connection.createStatement();
         
-        statement.execute(" INSERT INTO animais VALUES (13, 'doggo 13','dog','srd','10','1','ok','2024-10-10','1')");
+        //statement.execute(" INSERT INTO animais VALUES (13, 'doggo 13','dog','srd','10','1','ok','2024-10-10','1')");
 
-        //statement.execute(" DELETE FROM animais WHERE id = 13 ");
+        statement.execute(" DELETE FROM animais WHERE id = 13 ");
         
         // fechar o "script" SQL
         //statement.close();

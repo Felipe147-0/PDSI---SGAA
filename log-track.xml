@@ -1,0 +1,1677 @@
+<log>
+                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:11:42 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUrl(AppConfig.java:25)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:22)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.DataAccessObject.&lt;init&gt;(DataAccessObject.java:25)&#13;
+	at model.Doadores.&lt;init&gt;(Doadores.java:21)&#13;
+	at view.JFrameDoadoresCRUD.&lt;init&gt;(JFrameDoadoresCRUD.java:31)&#13;
+	at view.JFrameDoadoresCRUD$6.run(JFrameDoadoresCRUD.java:314)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:11:42 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUser(AppConfig.java:34)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:23)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.DataAccessObject.&lt;init&gt;(DataAccessObject.java:25)&#13;
+	at model.Doadores.&lt;init&gt;(Doadores.java:21)&#13;
+	at view.JFrameDoadoresCRUD.&lt;init&gt;(JFrameDoadoresCRUD.java:31)&#13;
+	at view.JFrameDoadoresCRUD$6.run(JFrameDoadoresCRUD.java:314)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:11:42 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getPassword(AppConfig.java:43)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:24)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.DataAccessObject.&lt;init&gt;(DataAccessObject.java:25)&#13;
+	at model.Doadores.&lt;init&gt;(Doadores.java:21)&#13;
+	at view.JFrameDoadoresCRUD.&lt;init&gt;(JFrameDoadoresCRUD.java:31)&#13;
+	at view.JFrameDoadoresCRUD$6.run(JFrameDoadoresCRUD.java:314)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:12 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUrl(AppConfig.java:25)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:22)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.DataAccessObject.&lt;init&gt;(DataAccessObject.java:25)&#13;
+	at model.Doadores.&lt;init&gt;(Doadores.java:21)&#13;
+	at view.JFrameDoadoresCRUD.&lt;init&gt;(JFrameDoadoresCRUD.java:31)&#13;
+	at view.JFrameDoadoresCRUD$6.run(JFrameDoadoresCRUD.java:314)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:13 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUser(AppConfig.java:34)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:23)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.DataAccessObject.&lt;init&gt;(DataAccessObject.java:25)&#13;
+	at model.Doadores.&lt;init&gt;(Doadores.java:21)&#13;
+	at view.JFrameDoadoresCRUD.&lt;init&gt;(JFrameDoadoresCRUD.java:31)&#13;
+	at view.JFrameDoadoresCRUD$6.run(JFrameDoadoresCRUD.java:314)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:13 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getPassword(AppConfig.java:43)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:24)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.DataAccessObject.&lt;init&gt;(DataAccessObject.java:25)&#13;
+	at model.Doadores.&lt;init&gt;(Doadores.java:21)&#13;
+	at view.JFrameDoadoresCRUD.&lt;init&gt;(JFrameDoadoresCRUD.java:31)&#13;
+	at view.JFrameDoadoresCRUD$6.run(JFrameDoadoresCRUD.java:314)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:46 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUrl(AppConfig.java:25)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:22)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:47 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUser(AppConfig.java:34)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:23)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:47 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getPassword(AppConfig.java:43)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:24)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:47 BRT 2024">java.sql.SQLException: The url cannot be null&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:666)&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)&#13;
+	at controller.DataBaseConnection.connect(DataBaseConnection.java:57)&#13;
+	at controller.DataBaseConnection.creatStatement(DataBaseConnection.java:64)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:74)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:57 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUrl(AppConfig.java:25)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:22)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:57 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUser(AppConfig.java:34)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:23)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:58 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getPassword(AppConfig.java:43)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:24)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:12:58 BRT 2024">java.sql.SQLException: The url cannot be null&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:666)&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)&#13;
+	at controller.DataBaseConnection.connect(DataBaseConnection.java:57)&#13;
+	at controller.DataBaseConnection.creatStatement(DataBaseConnection.java:64)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:74)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:13:38 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUrl(AppConfig.java:25)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:22)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:13:39 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUser(AppConfig.java:34)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:23)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:13:39 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getPassword(AppConfig.java:43)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:24)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:13:39 BRT 2024">java.sql.SQLException: The url cannot be null&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:666)&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)&#13;
+	at controller.DataBaseConnection.connect(DataBaseConnection.java:57)&#13;
+	at controller.DataBaseConnection.creatStatement(DataBaseConnection.java:64)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:74)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:14:38 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUrl(AppConfig.java:25)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:22)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:14:38 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUser(AppConfig.java:34)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:23)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:14:38 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getPassword(AppConfig.java:43)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:24)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:14:38 BRT 2024">java.sql.SQLException: The url cannot be null&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:666)&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)&#13;
+	at controller.DataBaseConnection.connect(DataBaseConnection.java:57)&#13;
+	at controller.DataBaseConnection.creatStatement(DataBaseConnection.java:64)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:74)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:15:34 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUrl(AppConfig.java:25)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:22)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:15:34 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getUser(AppConfig.java:34)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:23)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:15:34 BRT 2024">java.io.FileNotFoundException: C:\Users\felip\OneDrive\Área de Trabalho\MEU PROJET DSI\SGAA-AQ3016439\app-config.xml (O sistema não pode encontrar o arquivo especificado)&#13;
+	at java.base/java.io.FileInputStream.open0(Native Method)&#13;
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)&#13;
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:653)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)&#13;
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)&#13;
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)&#13;
+	at controller.AppConfig.readConfig(AppConfig.java:56)&#13;
+	at controller.AppConfig.getPassword(AppConfig.java:43)&#13;
+	at controller.DataBaseConnection.&lt;init&gt;(DataBaseConnection.java:24)&#13;
+	at controller.DataBaseConnection.getInstance(DataBaseConnection.java:32)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:16)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:15:34 BRT 2024">java.sql.SQLException: The url cannot be null&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:666)&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)&#13;
+	at controller.DataBaseConnection.connect(DataBaseConnection.java:57)&#13;
+	at controller.DataBaseConnection.creatStatement(DataBaseConnection.java:64)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:74)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:17:18 BRT 2024">com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)&#13;
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:819)&#13;
+	at com.mysql.cj.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:440)&#13;
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)&#13;
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)&#13;
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)&#13;
+	at controller.DataBaseConnection.connect(DataBaseConnection.java:57)&#13;
+	at controller.DataBaseConnection.creatStatement(DataBaseConnection.java:64)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:74)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.&#13;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)&#13;
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)&#13;
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)&#13;
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)&#13;
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)&#13;
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)&#13;
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)&#13;
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:939)&#13;
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:809)&#13;
+	... 25 more&#13;
+Caused by: java.net.ConnectException: Connection refused: connect&#13;
+	at java.base/sun.nio.ch.Net.connect0(Native Method)&#13;
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)&#13;
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)&#13;
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)&#13;
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)&#13;
+	at java.base/java.net.Socket.connect(Socket.java:633)&#13;
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)&#13;
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)&#13;
+	... 28 more&#13;
+</erro>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:18:11 BRT 2024">java.sql.SQLSyntaxErrorException: Unknown column 'cpf' in 'field list'&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:76)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                            
+    
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:18:56 BRT 2024">java.sql.SQLSyntaxErrorException: Unknown column 'cpf' in 'field list'&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:76)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                        
+    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:20:08 BRT 2024">java.sql.SQLSyntaxErrorException: Unknown column 'cpf' in 'field list'&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:76)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                    
+    
+    
+    
+    
+    <erro data-horario="Fri Dec 20 15:21:01 BRT 2024">java.sql.SQLSyntaxErrorException: Unknown column 'cpf' in 'field list'&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:76)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+                
+    
+    
+    
+    <erro data-horario="Fri Dec 20 16:48:12 BRT 2024">java.sql.SQLSyntaxErrorException: Unknown column 'cpf' in 'field list'&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:76)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:27)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:21)&#13;
+	at view.JFrameDoadoresConsulta.&lt;init&gt;(JFrameDoadoresConsulta.java:41)&#13;
+	at view.JFrameDoadoresConsulta$7.run(JFrameDoadoresConsulta.java:280)&#13;
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+            
+    
+    
+    <erro data-horario="Fri Dec 20 16:52:28 BRT 2024">java.lang.Exception: O telefone deve estar no padrão (99)99999-9999.&#13;
+	at view.JFrameDoadoresCRUD.checkInput(JFrameDoadoresCRUD.java:206)&#13;
+	at view.JFrameDoadoresCRUD.jButtonSalvarActionPerformed(JFrameDoadoresCRUD.java:255)&#13;
+	at view.JFrameDoadoresCRUD$4.actionPerformed(JFrameDoadoresCRUD.java:89)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+            
+    
+    <erro data-horario="Fri Dec 20 16:52:34 BRT 2024">java.lang.Exception: O telefone deve estar no padrão (99)99999-9999.&#13;
+	at view.JFrameDoadoresCRUD.checkInput(JFrameDoadoresCRUD.java:206)&#13;
+	at view.JFrameDoadoresCRUD.jButtonSalvarActionPerformed(JFrameDoadoresCRUD.java:255)&#13;
+	at view.JFrameDoadoresCRUD$4.actionPerformed(JFrameDoadoresCRUD.java:89)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+            
+    
+    <erro data-horario="Fri Dec 20 16:52:39 BRT 2024">java.sql.SQLException: Field 'telefone' doesn't have a default value&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)&#13;
+	at controller.DataBaseConnection.executeSQL(DataBaseConnection.java:86)&#13;
+	at controller.DataAccessObject.insert(DataAccessObject.java:68)&#13;
+	at controller.DataAccessObject.save(DataAccessObject.java:102)&#13;
+	at view.JFrameDoadoresCRUD.jButtonSalvarActionPerformed(JFrameDoadoresCRUD.java:257)&#13;
+	at view.JFrameDoadoresCRUD$4.actionPerformed(JFrameDoadoresCRUD.java:89)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+            
+    
+    <erro data-horario="Fri Dec 20 16:52:49 BRT 2024">java.sql.SQLException: Field 'telefone' doesn't have a default value&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)&#13;
+	at controller.DataBaseConnection.executeSQL(DataBaseConnection.java:86)&#13;
+	at controller.DataAccessObject.insert(DataAccessObject.java:68)&#13;
+	at controller.DataAccessObject.save(DataAccessObject.java:102)&#13;
+	at view.JFrameDoadoresCRUD.jButtonSalvarActionPerformed(JFrameDoadoresCRUD.java:257)&#13;
+	at view.JFrameDoadoresCRUD$4.actionPerformed(JFrameDoadoresCRUD.java:89)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+        
+    
+    <erro data-horario="Fri Dec 20 16:55:56 BRT 2024">com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'telefone' at row 1&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)&#13;
+	at controller.DataBaseConnection.executeSQL(DataBaseConnection.java:86)&#13;
+	at controller.DataAccessObject.insert(DataAccessObject.java:68)&#13;
+	at controller.DataAccessObject.save(DataAccessObject.java:102)&#13;
+	at view.JFrameDoadoresCRUD.jButtonSalvarActionPerformed(JFrameDoadoresCRUD.java:257)&#13;
+	at view.JFrameDoadoresCRUD$4.actionPerformed(JFrameDoadoresCRUD.java:89)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+    
+    <erro data-horario="Fri Dec 20 16:59:14 BRT 2024">java.lang.Exception: O CPF deve estar no padrão DDD.DDD.DDD-DD.&#13;
+	at view.JFrameDoadoresCRUD.checkInput(JFrameDoadoresCRUD.java:201)&#13;
+	at view.JFrameDoadoresCRUD.jButtonSalvarActionPerformed(JFrameDoadoresCRUD.java:255)&#13;
+	at view.JFrameDoadoresCRUD$4.actionPerformed(JFrameDoadoresCRUD.java:89)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
+</erro>
+</log>
