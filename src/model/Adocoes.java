@@ -51,7 +51,7 @@ public class Adocoes extends DataAccessObject{
         if( dataAdocao == null){
             if (this.dataAdocao != null) {
                 this.dataAdocao = dataAdocao;
-                addChange("dataAdocao", null);
+                addChange("data_adocao", null);
             }
         } else {
             if (!dataAdocao.equals(this.dataAdocao)) {

@@ -18,13 +18,29 @@ public class Animais extends DataAccessObject{
     private String especie;
     private String raca;
     private String idade;
-    private Boolean sexo;
+    private SexoEnum sexo;
     private String saude;
     private String dataEntrada;
-    private String disponivelAdocao;
+    private boolean disponivelAdocao;
 
     public Animais() {
         super("animais");
+    }
+
+    public void setSexo(SexoEnum sexo) {
+        this.sexo = sexo;
+    }
+
+    public void setDisponivelAdocao(boolean disponivelAdocao) {
+        this.disponivelAdocao = disponivelAdocao;
+    }
+
+    public SexoEnum getSexo() {
+        return sexo;
+    }
+
+    public boolean isDisponivelAdocao() {
+        return disponivelAdocao;
     }
 
     public int getId() {
@@ -47,9 +63,7 @@ public class Animais extends DataAccessObject{
         return idade;
     }
 
-    public boolean getSexo() {
-        return sexo;
-    }
+    
 
     public String getSaude() {
         return saude;
@@ -59,9 +73,7 @@ public class Animais extends DataAccessObject{
         return dataEntrada;
     }
 
-    public String getDisponivelAdocao() {
-        return disponivelAdocao;
-    }
+    
 
     public void setId(int id) {
         if( id != this.id ){
@@ -112,12 +124,7 @@ public class Animais extends DataAccessObject{
         }
     }
 
-    public void setSexo(Boolean sexo) {
-        if(this.sexo != sexo){
-            this.sexo = sexo;
-            addChange("sexo", this.sexo);
-        }
-    }
+    
 
     public void setSaude(String saude) {
         if(this.saude != saude){
@@ -133,12 +140,7 @@ public class Animais extends DataAccessObject{
         }
     }
 
-    public void setDisponivelAdocao(String disponivelAdocao) {
-        if(this.disponivelAdocao != disponivelAdocao){
-            this.disponivelAdocao = disponivelAdocao;
-            addChange("disponivel_adocao", this.disponivelAdocao);
-        }
-    }
+    
     
 
     @Override
@@ -163,8 +165,7 @@ public class Animais extends DataAccessObject{
         if( data.get(4) == null) idade = null;
         else idade = (String) data.get(4);
         
-        if( data.get(5) == null) sexo = null;
-        else sexo = (boolean) data.get(5);
+        sexo = (SexoEnum) data.get(5);
         
         if( data.get(6) == null) saude = null;
         else saude = (String) data.get(6);
@@ -172,8 +173,7 @@ public class Animais extends DataAccessObject{
         if( data.get(7) == null) dataEntrada = null;
         else dataEntrada = (String) data.get(7);
         
-        if( data.get(8) == null) disponivelAdocao = null;
-        else disponivelAdocao = (String) data.get(8);
+        disponivelAdocao = (Boolean) data.get(8);
     }
     
     @Override

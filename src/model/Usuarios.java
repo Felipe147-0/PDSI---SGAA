@@ -17,7 +17,13 @@ public class Usuarios extends DataAccessObject {
     private String nome;
     private String login;
     private String senha;
-    private enum tipoUsuario{administrador, funcionario}; // remover?
+    private TipoUsuarioEnum tipoUsuario;
+
+    
+
+    public TipoUsuarioEnum getTipoUsuario() {
+        return tipoUsuario;
+    }
     
     public Usuarios(){  
         super ("usuarios");     
@@ -40,6 +46,10 @@ public class Usuarios extends DataAccessObject {
     }
     
     //setter
+    
+    public void setTipoUsuario(TipoUsuarioEnum tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
 
     public void setId(int id) {
         if( id != this.id ){
