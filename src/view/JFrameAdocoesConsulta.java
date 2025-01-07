@@ -20,15 +20,17 @@ import model.Adocoes;
 public class JFrameAdocoesConsulta extends javax.swing.JFrame {
     
     private Adocoes adocoes;
+    
     private boolean disconnectOnClose;    
     private boolean selection;
     
     private String query = "SELECT id as ID, data_adocao as 'Data Adocao', animais_id as Animais,adotantes_id as adotantes FROM adocoes";
     
     private ResultSetTableModel result;
-    private final TableRowSorter< TableModel > filter;        
+    private final TableRowSorter< TableModel > filter;  
+    
     /** Creates new form JFrameAdocoesConsulta */
-    public JFrameAdocoesConsulta(Adocoes adocoes, boolean disconnectOnClose,  boolean selection) throws SQLException {
+    public JFrameAdocoesConsulta(Adocoes adocoes, boolean disconnectOnClose,  boolean selection) throws Exception {
         initComponents();
         
         this.adocoes = adocoes;

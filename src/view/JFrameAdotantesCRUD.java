@@ -4,17 +4,36 @@
  */
 package view;
 
+import controller.LogTrack;
+import java.awt.event.WindowEvent;
+import java.sql.SQLException;
+import model.Adotantes;
+
 /**
  *
  * @author felip
  */
 public class JFrameAdotantesCRUD extends javax.swing.JFrame {
+    
+    private Adotantes adotantes;
+    private boolean disconnectOnClose;
 
     /**
      * Creates new form JFrameAdotantesCRUD
      */
-    public JFrameAdotantesCRUD() {
+    public JFrameAdotantesCRUD(Adotantes adotantes, boolean disconnectOnClose) {
         initComponents();
+        
+        this.adotantes = adotantes;
+        this.disconnectOnClose = disconnectOnClose;
+        
+        if( this.adotantes == null ) { 
+            this.adotantes = new Adotantes();
+            jButtonExcluir.setEnabled(false);
+        } else {
+            dataUp();
+            jTextFieldID.setEnabled(false);
+        }
     }
 
     /**
@@ -26,21 +45,273 @@ public class JFrameAdotantesCRUD extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabelID = new javax.swing.JLabel();
+        jTextFieldID = new javax.swing.JTextField();
+        jLabelCpf = new javax.swing.JLabel();
+        jTextFieldCpf = new javax.swing.JTextField();
+        jLabelNome = new javax.swing.JLabel();
+        jTextFieldNome = new javax.swing.JTextField();
+        jLabelTelefone = new javax.swing.JLabel();
+        jTextFieldTelefone = new javax.swing.JTextField();
+        jButtonExcluir = new javax.swing.JButton();
+        jButtonSalvar = new javax.swing.JButton();
+        jLabelEndereco = new javax.swing.JLabel();
+        jTextFieldEndereco = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Adotantes CRUD");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
+
+        jLabelID.setText("ID:");
+
+        jTextFieldID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldIDActionPerformed(evt);
+            }
+        });
+
+        jLabelCpf.setText("CPF:");
+
+        jLabelNome.setText("Nome:");
+
+        jLabelTelefone.setText("Telefone:");
+
+        jTextFieldTelefone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldTelefoneActionPerformed(evt);
+            }
+        });
+
+        jButtonExcluir.setText("Excluir");
+        jButtonExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExcluirActionPerformed(evt);
+            }
+        });
+
+        jButtonSalvar.setText("Salvar");
+        jButtonSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalvarActionPerformed(evt);
+            }
+        });
+
+        jLabelEndereco.setText("Endereço:");
+
+        jTextFieldEndereco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldEnderecoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabelID)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabelCpf)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextFieldCpf))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabelNome)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabelTelefone)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelEndereco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldEndereco)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelCpf)
+                        .addComponent(jTextFieldCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelID))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelNome)
+                    .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelTelefone)
+                    .addComponent(jTextFieldTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelEndereco)
+                    .addComponent(jTextFieldEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonExcluir)
+                    .addComponent(jButtonSalvar))
+                .addGap(15, 15, 15))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    
+    private void checkInput() throws Exception{
+        
+        if( jTextFieldID.getText().isEmpty() ) {
+            throw new Exception("ID deve ser informado!");
+        } else {
+            if( !jTextFieldID.getText().matches("\\d+") ) {
+                throw new Exception("ID deve ser um número.");
+            }               
+        }
+        
+        if( jTextFieldNome.getText().isEmpty() ) {
+            throw new Exception("O Nome deve ser informado!");
+        }
+        
+        if( !jTextFieldCpf.getText().isEmpty() &&
+               !jTextFieldCpf.getText().matches("\\d{3}.\\d{3}.\\d{3}-\\d{2}") ) {
+            throw new Exception("O CPF deve estar no padrão DDD.DDD.DDD-DD.");
+        }
+        
+        if( !jTextFieldTelefone.getText().isEmpty() &&
+               !jTextFieldTelefone.getText().matches("\\(\\d{2}\\)\\d{4,5}-\\d{4}") ) {
+            throw new Exception("O telefone deve estar no padrão (99)99999-9999.");
+        }
+        
+         if( jTextFieldEndereco.getText().isEmpty() ) {
+            throw new Exception("O Endereço deve ser informado!");
+        }
+    }
+    
+    private void dataUp() {
+        
+        jTextFieldID.setText( String.valueOf( adotantes.getId() ) );
+        
+        jTextFieldNome.setText( adotantes.getNome() );
+        
+        jTextFieldCpf.setText( adotantes.getCpf() );
+        
+        jTextFieldTelefone.setText( adotantes.getTelefone() );
+        
+        jTextFieldEndereco.setText(adotantes.getEndereco());
+        
+    }
+
+    private void dataDown() {
+        
+        adotantes.setId( Integer.valueOf( jTextFieldID.getText() ) );
+        
+        if( jTextFieldNome.getText().isEmpty() ) {
+            adotantes.setNome(null);
+        } else {
+            adotantes.setNome( jTextFieldNome.getText() );
+        }
+        
+        if( jTextFieldCpf.getText().isEmpty() ) {
+            adotantes.setCpf(null);
+        } else {
+            adotantes.setCpf( jTextFieldCpf.getText() );
+        }
+        
+        if( jTextFieldTelefone.getText().isEmpty() ) {
+            adotantes.setTelefone(null);
+        } else {
+            adotantes.setTelefone( jTextFieldTelefone.getText() );
+        }
+        
+        if( jTextFieldEndereco.getText().isEmpty() ) {
+            adotantes.setEndereco(null);
+        } else {
+            adotantes.setEndereco( jTextFieldEndereco.getText() );
+        }
+    }
+    
+    
+    private void jTextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldIDActionPerformed
+
+    private void jTextFieldTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTelefoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldTelefoneActionPerformed
+
+    private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
+        // TODO add your handling code here:
+        try {
+
+            System.out.println("Excluir.");
+
+            checkInput();
+            dataDown();
+            adotantes.delete(); // delete
+
+            this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
+
+        } catch(Exception ex) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+    }//GEN-LAST:event_jButtonExcluirActionPerformed
+
+    private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
+        // TODO add your handling code here:
+        try {
+
+            System.out.println("Salvar.");
+
+            checkInput();
+            dataDown();
+            adotantes.save(); // insert || update
+
+            this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
+
+        } catch(Exception ex) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+    }//GEN-LAST:event_jButtonSalvarActionPerformed
+
+    private void jTextFieldEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEnderecoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldEnderecoActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+         if( disconnectOnClose ) {
+            System.out.println("Desconectar BD.");
+            try {
+                adotantes.disconnectFromDatabase();
+            } catch(SQLException ex) {
+                LogTrack.getInstance().adicionarLog(ex, true, this);
+            }
+                    
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
@@ -72,11 +343,29 @@ public class JFrameAdotantesCRUD extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFrameAdotantesCRUD().setVisible(true);
+                 try {
+                    new JFrameAdotantesCRUD( null, true ).setVisible(true);
+                } catch(Exception ex) {
+                    LogTrack.getInstance().adicionarLog(ex, true, null);
+                }
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonExcluir;
+    private javax.swing.JButton jButtonSalvar;
+    private javax.swing.JLabel jLabelCpf;
+    private javax.swing.JLabel jLabelEndereco;
+    private javax.swing.JLabel jLabelID;
+    private javax.swing.JLabel jLabelNome;
+    private javax.swing.JLabel jLabelTelefone;
+    private javax.swing.JTextField jTextFieldCpf;
+    private javax.swing.JTextField jTextFieldEndereco;
+    private javax.swing.JTextField jTextFieldID;
+    private javax.swing.JTextField jTextFieldNome;
+    private javax.swing.JTextField jTextFieldTelefone;
     // End of variables declaration//GEN-END:variables
+
+    
 }

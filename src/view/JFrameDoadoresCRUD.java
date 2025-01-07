@@ -241,7 +241,7 @@ public class JFrameDoadoresCRUD extends javax.swing.JFrame {
         
         jTextFieldCpf.setText( doadores.getCpf() );
         
-        jTextFieldCpf.setText( doadores.getTelefone() );
+        jTextFieldTelefone.setText( doadores.getTelefone() );
         
     }
     

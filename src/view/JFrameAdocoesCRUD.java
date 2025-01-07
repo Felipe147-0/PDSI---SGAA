@@ -8,7 +8,6 @@ import controller.LogTrack;
 import java.awt.event.WindowEvent;
 import java.sql.SQLException;
 import model.Adocoes;
-import model.Doadores;
 
 /**
  *
@@ -217,9 +216,9 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
         
         jTextFieldAnimalId.setText( String.valueOf( adocoes.getId() ) );
         
-        jTextFieldAdotantesId.setText( String.valueOf( adocoes.getId() ) );
+        jTextFieldAdotantesId.setText( String.valueOf( adocoes.getId()) );
         
-        jTextFieldDataAdocao.setText( String.valueOf( adocoes.getId() ) );
+        jTextFieldDataAdocao.setText( String.valueOf( adocoes.getDataAdocao()) );
               
     }
     
