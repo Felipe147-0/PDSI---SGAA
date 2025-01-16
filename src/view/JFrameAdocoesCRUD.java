@@ -7,6 +7,8 @@ package view;
 import controller.LogTrack;
 import java.awt.event.WindowEvent;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import model.Adocoes;
 
 /**
@@ -178,37 +180,51 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
         }
         
         if( jTextFieldAnimalId.getText().isEmpty() ) {
-            throw new Exception("ID deve ser informado!");
+            throw new Exception("ID do animal deve ser informado!");
         } else {
             if( !jTextFieldAnimalId.getText().matches("\\d+") ) {
-                throw new Exception("ID deve ser um número.");
+                throw new Exception("ID do animal deve ser um número.");
             }               
         }
         
         if( jTextFieldAdotantesId.getText().isEmpty() ) {
-            throw new Exception("ID deve ser informado!");
+            throw new Exception("ID do adotante deve ser informado!");
         } else {
             if( !jTextFieldAdotantesId.getText().matches("\\d+") ) {
-                throw new Exception("ID deve ser um número.");
+                throw new Exception("ID do adotante deve ser um número.");
             }               
         }
         
-        if( !jTextFieldDataAdocao.getText().isEmpty() &&
-               jTextFieldDataAdocao.getText().matches("\\d{4}-\\d{2}-\\d{2}") ) {
+        String data = jTextFieldDataAdocao.getText().trim();
+            if(data.isEmpty()) {
+                throw new Exception("O campo data de adoção não pode estar vazio.");
+            }
+
+            try {
+                LocalDate.parse(data); // Valida a data e o formato
+            } catch (DateTimeParseException e) {
+                throw new Exception("A data de adoção deve estar no formato válido YYYY-MM-DD.");
+            }
+        
+       /* if( !jTextFieldDataAdocao.getText().isEmpty() &&
+               !jTextFieldDataAdocao.getText().matches("\\d{4}-\\d{2}-\\d{2}") ) {
             throw new Exception("A data de adocao deve estar no padrão YYYY-MM-DD.");
-        }
+        }*/
         
     }
     
     private void dataDown() throws Exception{
         adocoes.setId( Integer.valueOf( jTextFieldID.getText() ) );
          
-        adocoes.setId( Integer.valueOf( jTextFieldAnimalId.getText() ) );
+        adocoes.setIdAnimal(Integer.valueOf( jTextFieldAnimalId.getText() ) );
         
-        adocoes.setId( Integer.valueOf( jTextFieldAdotantesId.getText() ) );
-        
-        adocoes.setId( Integer.valueOf( jTextFieldDataAdocao.getText() ) );
+        adocoes.setIdAdotantes(Integer.valueOf( jTextFieldAdotantesId.getText() ) );
        
+        if( jTextFieldDataAdocao.getText().isEmpty() ) {
+            adocoes.setDataAdocao(null);
+        } else {
+            adocoes.setDataAdocao( jTextFieldDataAdocao.getText() );
+        }
     }
     
     private void dataUp(){
@@ -218,7 +234,7 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
         
         jTextFieldAdotantesId.setText( String.valueOf( adocoes.getId()) );
         
-        jTextFieldDataAdocao.setText( String.valueOf( adocoes.getDataAdocao()) );
+        jTextFieldDataAdocao.setText(  adocoes.getDataAdocao() );
               
     }
     

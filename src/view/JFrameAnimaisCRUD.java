@@ -32,14 +32,54 @@ public class JFrameAnimaisCRUD extends javax.swing.JFrame {
     }
      private void checkInput() throws Exception{
             
+        if( jTextFieldId.getText().isEmpty() ) {
+              throw new Exception("ID deve ser informado!");
+        } else {
+            if( !jTextFieldId.getText().matches("\\d+") ) {
+              throw new Exception("O ID deve ser um número.");
+            }
+        }
+          
+        if( jTextFieldNome.getText().isEmpty() ) {
+              throw new Exception("O Nome deve ser informado!");
+        }
+        
+        if( jTextFieldEspecie.getText().isEmpty() ) {
+              throw new Exception("A Especie deve ser informada!");
+        }
+        
+        if( jTextFieldRaca.getText().isEmpty() ) {
+              throw new Exception("A Raca deve ser informada!");
+        }
+        
+        if( jTextFieldIdade.getText().isEmpty() ) {
+              throw new Exception("A Idade deve ser informada!");
+        }
+        
+        if(!jRadioButtonMasculino.isSelected() && !jRadioButtonFeminino.isSelected()) {
+              throw new Exception("O gênero deve ser selecionado!");
+        }
+        
      }
      
      private void dataDown() throws Exception {
          
-     }
+        animais.setId( Integer.valueOf( jTextFieldId.getText() ) );
+
+        if( jTextFieldEspecie.getText().isEmpty() ) {
+            animais.setEspecie(null);
+        } else {
+            animais.setEspecie( jTextFieldEspecie.getText() );
+        }
+        
+        
+    }
      
      private void dataUp() {
      
+        jTextFieldId.setText( String.valueOf( animais.getId() ) );
+
+        jTextFieldNome.setText( animais.getNome() );
      }
      
     /**

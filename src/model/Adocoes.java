@@ -15,8 +15,16 @@ public class Adocoes extends DataAccessObject{
     
     private int id;
     private String dataAdocao;
-    private Animais animais;
-    private Adotantes adotantes;
+    private int idAnimal; //int idAnimal
+    private int idAdotantes;
+
+    public int getIdAnimal() {
+        return idAnimal;
+    }
+
+    public int getIdAdotantes() {
+        return idAdotantes;
+    }
 
     public Adocoes() {
         super("adocoes");
@@ -29,7 +37,7 @@ public class Adocoes extends DataAccessObject{
     public String getDataAdocao() {
         return dataAdocao;
     }
-
+    /*
     public Animais getAnimais() {
         return animais;
     }
@@ -37,7 +45,9 @@ public class Adocoes extends DataAccessObject{
     public Adotantes getAdotantes() {
         return adotantes;
     }
-
+    */
+    
+    
     //setter
 
     public void setId(int id) {
@@ -61,7 +71,18 @@ public class Adocoes extends DataAccessObject{
         }
     }
 
+    public void setIdAnimal(int idAnimal) {
+        this.idAnimal = idAnimal;
+        
+    }
+
+    public void setIdAdotantes(int idAdotantes) {
+        this.idAdotantes = idAdotantes;
+    }
+    
+    /*
     public void setAnimais(Animais animais) throws Exception{
+        
         if( animais == null ) {
             if( this.animais != null ) {
                 this.animais = animais;
@@ -81,8 +102,9 @@ public class Adocoes extends DataAccessObject{
                 }
             }
         }
-    }
-
+        
+    }*/
+    /*
     public void setAdotantes(Adotantes adotantes) throws Exception{
         if( adotantes == null ) {
             if( this.adotantes != null ) {
@@ -104,7 +126,7 @@ public class Adocoes extends DataAccessObject{
             }
         }
     }
-    
+    */
     
     @Override
     protected String getWhereClauseForOneEntry() {
@@ -113,11 +135,16 @@ public class Adocoes extends DataAccessObject{
 
     @Override
     protected void fill(ArrayList<Object> data) throws Exception{
+        
         id = (int) data.get(0);
         
         if( data.get(1) == null) dataAdocao = null;
         else dataAdocao = (String) data.get(1);
+       
+        idAnimal = (int) data.get(2);
         
+        idAdotantes = (int) data.get(3);
+        /*
         if( data.get(2) != null ) {
             animais = new Animais();
             animais.setId( (int) data.get(2) );
@@ -133,7 +160,7 @@ public class Adocoes extends DataAccessObject{
         } else {
             adotantes = null;
         } 
-        
+        */
     }
     
     

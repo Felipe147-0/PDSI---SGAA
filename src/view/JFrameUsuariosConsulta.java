@@ -6,6 +6,7 @@ package view;
 
 import controller.LogTrack;
 import controller.ResultSetTableModel;
+import java.awt.event.WindowEvent;
 import java.sql.SQLException;
 import static java.util.Locale.filter;
 import javax.swing.RowFilter;
@@ -23,7 +24,7 @@ public class JFrameUsuariosConsulta extends javax.swing.JFrame {
     private boolean disconnectOnClose;    
     private boolean selection;
     
-    private String query = "SELECT id as ID, nome as Nome, login as login, senha as senha, tipo_usuario as tipo_usuario FROM usuarios";
+    private String query = "SELECT id as ID, nome as Nome, login as Login, senha as Senha, tipo_usuario as 'tipo de usuario' FROM usuarios";
     
     private ResultSetTableModel result;
     private final TableRowSorter< TableModel > filter;
@@ -243,6 +244,23 @@ public class JFrameUsuariosConsulta extends javax.swing.JFrame {
 
     private void jButtonSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarActionPerformed
         // TODO add your handling code here:
+        int row = jTableConsulta.getSelectedRow();
+        if( row != -1 ) {
+            
+            System.out.println("Selecionar.");
+            
+            int id = (int) jTableConsulta.getValueAt(row, 0);
+            
+            usuarios.setId(id); 
+            
+            try {                
+                usuarios.load();                
+                this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
+            } catch(Exception ex) {
+                LogTrack.getInstance().adicionarLog(ex, true, this);
+            }
+            
+        }
     }//GEN-LAST:event_jButtonSelecionarActionPerformed
 
     private void jButtonFiltrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFiltrarActionPerformed

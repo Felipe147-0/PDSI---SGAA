@@ -59,7 +59,9 @@ public class JFrameUsuariosCRUD extends javax.swing.JFrame {
                 throw new Exception("Login deve ser Informado no formato: usuario@exemplo.com!");
             }
         
-        
+             if( jPasswordFieldSenha.getText().isEmpty() ) {
+            new Exception("Informe Senha.");
+            }
         }
     
         private void dataDown() throws Exception {
@@ -95,7 +97,7 @@ public class JFrameUsuariosCRUD extends javax.swing.JFrame {
 
             jTextFieldLogin.setText( usuarios.getLogin() );
 
-            jPasswordFieldSenha.setText( usuarios.getSenha() );
+            jPasswordFieldSenha.setText( usuarios.getSenha());
             
             
         }

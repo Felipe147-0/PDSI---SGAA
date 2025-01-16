@@ -6,6 +6,7 @@ package view;
 
 import controller.LogTrack;
 import controller.ResultSetTableModel;
+import java.awt.event.WindowEvent;
 import java.sql.SQLException;
 import javax.swing.RowFilter;
 import javax.swing.table.TableModel;
@@ -184,6 +185,23 @@ public class JFrameAnimaisConsulta extends javax.swing.JFrame {
 
     private void jButtonSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarActionPerformed
         // TODO add your handling code here:
+        int row = jTableConsulta.getSelectedRow();
+        if( row != -1 ) {
+            
+            System.out.println("Selecionar.");
+            
+            int id = (int) jTableConsulta.getValueAt(row, 0);
+            
+            animais.setId(id); // o objeto TipoUsuario vem da janela CRUD Usuario
+            
+            try {                
+                animais.load();                
+                this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
+            } catch(Exception ex) {
+                LogTrack.getInstance().adicionarLog(ex, true, this);
+            }
+            
+        }
     }//GEN-LAST:event_jButtonSelecionarActionPerformed
 
     private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarActionPerformed

@@ -24,7 +24,7 @@ public class JFrameAdocoesConsulta extends javax.swing.JFrame {
     private boolean disconnectOnClose;    
     private boolean selection;
     
-    private String query = "SELECT id as ID, data_adocao as 'Data Adocao', animais_id as Animais,adotantes_id as adotantes FROM adocoes";
+    private String query = "SELECT id as ID, data_adocao as Data_Adocao, animais_id as AnimaisID ,adotantes_id as adotantesID FROM adocoes";
     
     private ResultSetTableModel result;
     private final TableRowSorter< TableModel > filter;  
@@ -173,6 +173,7 @@ public class JFrameAdocoesConsulta extends javax.swing.JFrame {
 
     private void jButtonSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButtonSelecionarActionPerformed
 
     private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarActionPerformed

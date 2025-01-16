@@ -7,7 +7,10 @@ package view;
 
 import controller.LogTrack;
 import controller.ResultSetTableModel;
+import java.awt.event.WindowEvent;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.RowFilter;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
@@ -225,50 +228,50 @@ public class JFrameDoadoresConsulta extends javax.swing.JFrame {
 
     private void jButtonSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarActionPerformed
         // TODO add your handling code here:
-        try { 
+        int row = jTableConsulta.getSelectedRow();
+        if( row != -1 ) {
             
-            JFrameDoadoresCRUD jFrameCRUD;
-            // null porque o objeto persistente ainda não existe
-            jFrameCRUD = new JFrameDoadoresCRUD( null, false );
-
-            jFrameCRUD.addWindowListener( new java.awt.event.WindowAdapter() {
-                   @Override
-                   public void windowClosed(java.awt.event.WindowEvent evt) {
-                       try {
-                           System.out.println("Atualizar JTable.");
-                           result.setQuery(query);
-                       } catch( SQLException ex ) {
-                           LogTrack.getInstance().adicionarLog(ex, true, null);
-                       }
-                   }
-            } );
-
-            jFrameCRUD.setVisible(true);
+            System.out.println("Selecionar.");
             
-        } catch( Exception ex ) {
-            LogTrack.getInstance().adicionarLog(ex, true, this);
+            int id = (int) jTableConsulta.getValueAt(row, 0);
+            
+            doadores.setId(id); 
+            
+            try {                
+                doadores.load();                
+                this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
+            } catch(Exception ex) {
+                LogTrack.getInstance().adicionarLog(ex, true, this);
+            }
+            
         }
     }//GEN-LAST:event_jButtonSelecionarActionPerformed
 
     private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
         // TODO add your handling code here:
-         JFrameDoadoresCRUD jFrameCRUD;
-        // null porque o objeto persistente ainda não existe
-        jFrameCRUD = new JFrameDoadoresCRUD( null, false );
-        
-        jFrameCRUD.addWindowListener( new java.awt.event.WindowAdapter() {
-               @Override
-               public void windowClosed(java.awt.event.WindowEvent evt) {
-                   try {
-                       System.out.println("Atualizar JTable.");
-                       result.setQuery(query);
-                   } catch( SQLException ex ) {
-                       LogTrack.getInstance().adicionarLog(ex, true, null);
-                   }
-               }
-        } );
-        
-        jFrameCRUD.setVisible(true);
+        try {
+
+            JFrameDoadoresCRUD jFrameCRUD;
+            // null porque o objeto persistente ainda não existe
+            jFrameCRUD = new JFrameDoadoresCRUD( null, false );
+
+            jFrameCRUD.addWindowListener( new java.awt.event.WindowAdapter() {
+                @Override
+                    public void windowClosed(java.awt.event.WindowEvent evt) {
+                    try {
+                        System.out.println("Atualizar JTable.");
+                        result.setQuery(query);
+                    } catch( SQLException ex ) {
+                        LogTrack.getInstance().adicionarLog(ex, true, null);
+                    }
+                }
+            } );
+
+            jFrameCRUD.setVisible(true);
+
+        } catch( Exception ex ) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
     }//GEN-LAST:event_jButtonAdicionarActionPerformed
 
     /**

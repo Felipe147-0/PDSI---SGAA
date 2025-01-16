@@ -21,7 +21,7 @@ public class JFrameDoadoresCRUD extends javax.swing.JFrame {
     /**
      * Creates new form JFrameDoadores
      */
-    public JFrameDoadoresCRUD(Doadores doadores, boolean disconnectOnClose) {
+    public JFrameDoadoresCRUD(Doadores doadores, boolean disconnectOnClose) throws Exception {
         initComponents();
         
         this.doadores = doadores;

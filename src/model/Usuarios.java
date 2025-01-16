@@ -5,6 +5,8 @@
 package model;
 
 import controller.DataAccessObject;
+import java.math.BigInteger;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 
 /**
@@ -43,6 +45,17 @@ public class Usuarios extends DataAccessObject {
 
     public String getSenha() {
         return senha;
+    }
+    
+    private String getSenhaHash(String senha) throws Exception {
+        // sal de bits
+        senha = String.valueOf( id ) + senha;
+        
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        String hash;
+        hash = new BigInteger( md.digest( senha.getBytes("UTF-8") ) ).toString(16);
+        
+        return hash;
     }
     
     //setter
@@ -86,7 +99,7 @@ public class Usuarios extends DataAccessObject {
         }
     }
 
-    public void setSenha(String senha) {
+    public void setSenha(String senha) throws Exception {
         if( senha == null ) {
             if( this.senha != null ) {
                 this.senha = senha;
@@ -94,7 +107,7 @@ public class Usuarios extends DataAccessObject {
             }
         } else {
             if( !senha.equals(this.senha) ) {
-                this.senha = senha;
+                this.senha = getSenhaHash(senha);
                 addChange("senha", this.senha);
             }
         }

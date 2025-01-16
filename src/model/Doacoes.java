@@ -18,7 +18,9 @@ public class Doacoes extends DataAccessObject {
     private String descricao;
     private String valor;
     private String dataDoacao;
+   
     private Doadores doadores;
+
 
     public Doacoes() {
         super("doacoes");
@@ -43,13 +45,10 @@ public class Doacoes extends DataAccessObject {
     public String getDataDoacao() {
         return dataDoacao;
     }
-
+    
     public Doadores getDoadores() {
         return doadores;
     }
-
-    
-    
     
     public void setId(int id) {
         if( id != this.id ) {
@@ -100,16 +99,16 @@ public class Doacoes extends DataAccessObject {
         }
     }
 
-    public void setDataDoacao(String data) {
+    public void setDataDoacao(String dataDoacao) {
        if( dataDoacao == null ) {
             if( this.dataDoacao != null ) {
                 this.dataDoacao = dataDoacao;
-                addChange("dataDoacao", null);
+                addChange("data_doacao", null);
             }
         } else {
             if( !dataDoacao.equals(this.dataDoacao) ) {
                 this.dataDoacao = dataDoacao;
-                addChange("dataDoacao", this.dataDoacao);
+                addChange("data_doacao", this.dataDoacao);
             }
         }
     }
@@ -134,6 +133,7 @@ public class Doacoes extends DataAccessObject {
                 }
             }
         }
+        
     }
     
     @Override
@@ -156,11 +156,12 @@ public class Doacoes extends DataAccessObject {
         else valor = (String) data.get(3);
         
         if( data.get(4) == null) dataDoacao = null;
-        else dataDoacao = (String) data.get(4);
+        else dataDoacao = (String) data.get(4).toString();
         
-        if( data.get(3) != null ) {
+        if( data.get(5) != null ) {
             doadores = new Doadores();
-            doadores.setId( (int) data.get(3) );
+            
+            doadores.setId( (int) data.get(5) );
             doadores.load();                                 
         } else {
             doadores = null;

@@ -6,6 +6,7 @@ package view;
 
 import controller.LogTrack;
 import controller.ResultSetTableModel;
+import java.awt.event.WindowEvent;
 import java.sql.SQLException;
 import static java.util.Locale.filter;
 import javax.swing.RowFilter;
@@ -185,6 +186,23 @@ public class JFrameAdotantesConsulta extends javax.swing.JFrame {
 
     private void jButtonSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarActionPerformed
         // TODO add your handling code here:
+        int row = jTableConsulta.getSelectedRow();
+        if( row != -1 ) {
+            
+            System.out.println("Selecionar.");
+            
+            int id = (int) jTableConsulta.getValueAt(row, 0);
+            
+            adotantes.setId(id); // 
+            
+            try {                
+                adotantes.load();                
+                this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
+            } catch(Exception ex) {
+                LogTrack.getInstance().adicionarLog(ex, true, this);
+            }
+            
+        }
     }//GEN-LAST:event_jButtonSelecionarActionPerformed
 
     private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarActionPerformed
@@ -197,7 +215,7 @@ public class JFrameAdotantesConsulta extends javax.swing.JFrame {
 
             int id = (int) jTableConsulta.getValueAt(row, 0);
 
-            Adotantes adocoes = new Adotantes();
+            Adotantes adotantes = new Adotantes();
             adotantes.setId(id);
 
             try {
