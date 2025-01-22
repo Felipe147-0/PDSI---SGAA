@@ -24,7 +24,7 @@ public class JFrameUsuariosConsulta extends javax.swing.JFrame {
     private boolean disconnectOnClose;    
     private boolean selection;
     
-    private String query = "SELECT id as ID, nome as Nome, login as Login, senha as Senha, tipo_usuario as 'tipo de usuario' FROM usuarios";
+    private String query = "SELECT id as ID, nome as Nome, login as Login, senha as Senha, tipo_usuario as 'Tipo de usuario' FROM usuarios";
     
     private ResultSetTableModel result;
     private final TableRowSorter< TableModel > filter;

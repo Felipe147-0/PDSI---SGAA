@@ -12,17 +12,35 @@ import java.util.ArrayList;
  * @author felip
  */
 public class Doadores extends DataAccessObject {
-    private int id;
+    private int idd;
     private String nome;
     private String cpf;
     private String telefone;
+    
+    private Doacoes doacoes;
 
     public Doadores() {
         super("doadores");
     }
 
-    public int getId() {
-        return id;
+    
+    
+    
+    public Doacoes getDoacoes() {
+        return doacoes;
+    }
+
+    public void setDoacoes(Doacoes doacoes) {
+        this.doacoes = doacoes;
+    }
+    
+    
+    
+    
+    
+
+    public int getIdd() {
+        return idd;
     }
 
     public String getNome() {
@@ -37,10 +55,10 @@ public class Doadores extends DataAccessObject {
         return telefone;
     }
 
-    public void setId(int id) {
-        if( id != this.id ){
-            this.id = id;
-            addChange("id", this.id);
+    public void setIdd(int idd) {
+        if( idd != this.idd ){
+            this.idd = idd;
+            addChange("id", this.idd);
         }
     }
 
@@ -79,29 +97,16 @@ public class Doadores extends DataAccessObject {
         }
     }
     
-@Override
-    public boolean equals(Object obj) {
-        if( obj instanceof Doadores ) {
-            Doadores aux = (Doadores) obj;
-            
-            if( getId() == aux.getId() ) {
-                return true;
-            } else {
-                return false;
-            }            
-        } else { 
-            return false;
-        }        
-    }    
+   
 
     @Override
     protected String getWhereClauseForOneEntry() {
-        return " id = " + this.id;
+        return " id = " + this.idd;
     }
 
     @Override
     protected void fill(ArrayList<Object> data) throws Exception {
-        id = (int) data.get(0);
+        idd = (int) data.get(0);
         
         if( data.get(1) == null) nome = null;
         else nome = (String) data.get(1);
@@ -112,4 +117,19 @@ public class Doadores extends DataAccessObject {
         if( data.get(3) == null ) telefone = null;
         else telefone = (String) data.get(3);
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if( obj instanceof Doadores ) {
+            Doadores aux = (Doadores) obj;
+            
+            if( getIdd() == aux.getIdd() ) {
+                return true;
+            } else {
+                return false;
+            }            
+        } else { 
+            return false;
+        }        
+    } 
 }

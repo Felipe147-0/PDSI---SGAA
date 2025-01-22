@@ -23,7 +23,7 @@ public class JFrameDoacoesConsulta extends javax.swing.JFrame {
     private boolean disconnectOnClose;    
     private boolean selection;
     
-    private String query = "SELECT id as ID, tipo_doacao as 'Tipo de Doacao', descricao as Descricao, valor as Valor, data_doacao as 'Data da Doacao' FROM doacoes";
+    private String query = "SELECT id as ID, tipo_doacao as 'Tipo de Doacao', descricao as Descricao, valor as Valor, data_doacao as 'Data da Doacao', doadores_id as 'Doadores Id' FROM doacoes";
     
     private ResultSetTableModel result;
     private final TableRowSorter< TableModel > filter;

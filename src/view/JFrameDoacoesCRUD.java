@@ -22,12 +22,15 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
     private Doadores doadores;
     private boolean disconnectOnClose;
     
+    
+    
     /**
      * Creates new form JFrameDoacoesCRUD
      */
     public JFrameDoacoesCRUD(Doacoes doacoes, boolean disconnectOnClose){
         initComponents();
         
+        this.doadores = new Doadores();
         this.doacoes = doacoes;
         this.disconnectOnClose = disconnectOnClose;
         
@@ -64,6 +67,7 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
         jTextAreaDescricao = new javax.swing.JTextArea();
         jLabelDoadoresId = new javax.swing.JLabel();
         jTextFieldDoadoresId = new javax.swing.JTextField();
+        jButtonSelecionarDoador = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Doaçoes CRUD");
@@ -115,6 +119,13 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
             }
         });
 
+        jButtonSelecionarDoador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/search-icon.png"))); // NOI18N
+        jButtonSelecionarDoador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSelecionarDoadorActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -133,7 +144,7 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabelDataDoacao)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldDataDoacao))
+                        .addComponent(jTextFieldDataDoacao, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -141,16 +152,19 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
                         .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelDescricao)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelValor)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldValor, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelDoadoresId)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldDoadoresId, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelDescricao)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabelValor)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldValor, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelDoadoresId)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldDoadoresId, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonSelecionarDoador, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -167,16 +181,18 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
                     .addComponent(jLabelTipoDoacao)
                     .addComponent(jTextFieldTipoDoacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelValor)
-                    .addComponent(jTextFieldValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDoadoresId)
-                    .addComponent(jTextFieldDoadoresId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabelValor)
+                        .addComponent(jTextFieldValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelDoadoresId)
+                        .addComponent(jTextFieldDoadoresId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonSelecionarDoador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelDescricao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonSalvar)
                     .addComponent(jButtonExcluir))
@@ -276,8 +292,8 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
         
         doacoes.setId( Integer.valueOf( jTextFieldID.getText() ) );
         
-        doacoes.setDoadores(doadores);
-        //doacoes.setId(Integer.valueOf( jTextFieldDoadoresId.getText() ) );
+        //doacoes.setDoadores(doadores);
+        doadores.setIdd(Integer.valueOf( jTextFieldDoadoresId.getText() ) );
         
         if( jTextFieldTipoDoacao.getText().isEmpty() ) {
                 doacoes.setTipoDoacao(null);
@@ -309,7 +325,8 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
      
         jTextFieldID.setText( String.valueOf( doacoes.getId() ) );
         
-        jTextFieldDoadoresId.setText( String.valueOf( doacoes.getId() ) );
+        jTextFieldDoadoresId.setText( String.valueOf( doadores.getIdd() ) );
+         
         
         jTextFieldTipoDoacao.setText( doacoes.getTipoDoacao() );
         
@@ -336,6 +353,34 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
     private void jTextFieldDoadoresIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDoadoresIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDoadoresIdActionPerformed
+
+    private void jButtonSelecionarDoadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarDoadorActionPerformed
+        // TODO add your handling code here:
+
+       try {
+    if (doadores == null) {
+        doadores = new Doadores();
+    }
+
+    JFrameDoadoresConsulta jFrameConsulta;
+    jFrameConsulta = new JFrameDoadoresConsulta(doadores, false, true);
+
+    jFrameConsulta.addWindowListener(new java.awt.event.WindowAdapter() {
+        @Override
+        public void windowClosed(java.awt.event.WindowEvent evt) {
+            // Atualiza o campo com o ID do doador selecionado
+            jTextFieldDoadoresId.setText(String.valueOf(doadores.getIdd())); // Use getId() para obter o ID
+        }
+    });
+
+    jFrameConsulta.setVisible(true);
+
+} catch (Exception ex) {
+    LogTrack.getInstance().adicionarLog(ex, true, this);
+}
+
+
+    }//GEN-LAST:event_jButtonSelecionarDoadorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -379,6 +424,7 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonExcluir;
     private javax.swing.JButton jButtonSalvar;
+    private javax.swing.JButton jButtonSelecionarDoador;
     private javax.swing.JLabel jLabelDataDoacao;
     private javax.swing.JLabel jLabelDescricao;
     private javax.swing.JLabel jLabelDoadoresId;

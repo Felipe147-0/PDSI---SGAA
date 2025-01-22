@@ -5,6 +5,7 @@
 package view;
 
 import controller.LogTrack;
+import model.TipoUsuarioEnum;
 import model.Usuarios;
 
 /**
@@ -21,6 +22,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         initComponents();
         
         logout();
+        usuarioLogado = new Usuarios();
     }
     private void login() {
         
@@ -30,6 +32,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
         
         jMenuUsuario.setText( usuarioLogado.getNome() );
         jMenuUsuario.setVisible(true);
+        
+        jMenuAdministrativo.setVisible(true);
+        jMenuFuncionario.setVisible(true);
+        
+        if (usuarioLogado.getTipoUsuario() == TipoUsuarioEnum.ADMINISTRADOR) {
+            jMenuAdministrativo.setEnabled(true); 
+        } else {
+            jMenuAdministrativo.setEnabled(false);            // Desativa o menu administrativo      
+        }
+            
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,6 +56,9 @@ public class JFramePrincipal extends javax.swing.JFrame {
         
         jMenuUsuario.setText("Usuário");
         jMenuUsuario.setVisible(false);
+        
+        jMenuAdministrativo.setVisible(false);
+        jMenuFuncionario.setVisible(false);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -54,9 +70,16 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jLabelSenha = new javax.swing.JLabel();
         jPasswordFieldSenha = new javax.swing.JPasswordField();
         jButtonLogin = new javax.swing.JButton();
+        jLabelBemVindo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuAdministrativo = new javax.swing.JMenu();
-        jMenu1 = new javax.swing.JMenu();
+        jMenuItemConsultaCadastro = new javax.swing.JMenuItem();
+        jMenuConsultaDoacoes = new javax.swing.JMenuItem();
+        jMenuItemConsultaDoadores = new javax.swing.JMenuItem();
+        jMenuFuncionario = new javax.swing.JMenu();
+        jMenuItemConsultaAnimal = new javax.swing.JMenuItem();
+        jMenuItemConsultaAdotantes = new javax.swing.JMenuItem();
+        jMenuItemConsultaAdocoes = new javax.swing.JMenuItem();
         jMenuUsuario = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
 
@@ -65,7 +88,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         jPanelLogin.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabelUsuario.setText("Usuário:");
+        jLabelUsuario.setText("ID Usuário:");
 
         jTextFieldUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,16 +135,68 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addGap(16, 16, 16))
         );
 
-        jMenuAdministrativo.setText("Adminitrativo");
+        jLabelBemVindo.setText("Bem vindo!");
+
+        jMenuAdministrativo.setText("Administrativo");
         jMenuAdministrativo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuAdministrativoActionPerformed(evt);
             }
         });
+
+        jMenuItemConsultaCadastro.setText("Consulta Cadastro Usuario");
+        jMenuItemConsultaCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaCadastroActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemConsultaCadastro);
+
+        jMenuConsultaDoacoes.setText("Consulta Doações");
+        jMenuConsultaDoacoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuConsultaDoacoesActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuConsultaDoacoes);
+
+        jMenuItemConsultaDoadores.setText("Consulta Doadores");
+        jMenuItemConsultaDoadores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaDoadoresActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemConsultaDoadores);
+
         jMenuBar1.add(jMenuAdministrativo);
 
-        jMenu1.setText("Funcionario");
-        jMenuBar1.add(jMenu1);
+        jMenuFuncionario.setText("Funcionario");
+
+        jMenuItemConsultaAnimal.setText("Consulta Cadastro Animal");
+        jMenuItemConsultaAnimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaAnimalActionPerformed(evt);
+            }
+        });
+        jMenuFuncionario.add(jMenuItemConsultaAnimal);
+
+        jMenuItemConsultaAdotantes.setText("Consulta Adotantes");
+        jMenuItemConsultaAdotantes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaAdotantesActionPerformed(evt);
+            }
+        });
+        jMenuFuncionario.add(jMenuItemConsultaAdotantes);
+
+        jMenuItemConsultaAdocoes.setText("Consulta Adoções");
+        jMenuItemConsultaAdocoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaAdocoesActionPerformed(evt);
+            }
+        });
+        jMenuFuncionario.add(jMenuItemConsultaAdocoes);
+
+        jMenuBar1.add(jMenuFuncionario);
 
         jMenuUsuario.setText("Usuário");
 
@@ -142,14 +217,21 @@ public class JFramePrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addComponent(jPanelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(jPanelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(239, 239, 239)
+                        .addComponent(jLabelBemVindo)))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(jLabelBemVindo)
+                .addGap(18, 18, 18)
                 .addComponent(jPanelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44))
         );
@@ -163,8 +245,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
         try {
             
             if( jTextFieldUsuario.getText().isEmpty() ||
-                    !jTextFieldUsuario.getText().matches("\\d+") ) {
-                throw new Exception("Usuário Inválido!");
+                !jTextFieldUsuario.getText().matches("\\d+") ) {
+            throw new Exception("Usuário Inválido! Usuario deve ser um numero!");
             }
             
             int id = Integer.parseInt( jTextFieldUsuario.getText() );
@@ -172,11 +254,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
             usuarioLogado.setId(id);
             usuarioLogado.load(); // hash do banco de dados
             
-            Usuarios usuario = new Usuarios(); 
-            usuario.setId( id );
-            usuario.setSenha( jPasswordFieldSenha.getText() ); // hash da senha informada
+            Usuarios usuarios = new Usuarios(); 
+            usuarios.setId( id );
+            usuarios.setSenha( jPasswordFieldSenha.getText() ); // hash da senha informada
             
-            if( usuarioLogado.getSenha().equals( usuario.getSenha() ) ) {
+            if( usuarioLogado.getSenha().equals( usuarios.getSenha() ) ) {
                 login();
             } else {
                 usuarioLogado = new Usuarios();
@@ -191,6 +273,33 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
     private void jTextFieldUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUsuarioActionPerformed
         // TODO add your handling code here:
+        try {
+            
+            if( jTextFieldUsuario.getText().isEmpty() ||
+                    !jTextFieldUsuario.getText().matches("\\d+") ) {
+                throw new Exception("Usuário Inválido!");
+            }
+            
+            int id = Integer.parseInt( jTextFieldUsuario.getText() );
+            
+            usuarioLogado.setId(id);
+            usuarioLogado.load(); // hash do banco de dados
+            
+            Usuarios usuarios = new Usuarios(); 
+            usuarios.setId( id );
+            usuarios.setSenha( jPasswordFieldSenha.getText() ); // hash da senha informada
+            
+            if( usuarioLogado.getSenha().equals( usuarios.getSenha() ) ) {
+                login();
+            } else {
+                usuarioLogado = new Usuarios();
+                throw new Exception("Senha Inválida!");
+            }
+            
+                        
+        } catch( Exception ex ) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
     }//GEN-LAST:event_jTextFieldUsuarioActionPerformed
 
     private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
@@ -210,6 +319,84 @@ public class JFramePrincipal extends javax.swing.JFrame {
             LogTrack.getInstance().adicionarLog(ex, true, this);
         }
     }//GEN-LAST:event_jMenuAdministrativoActionPerformed
+
+    private void jMenuItemConsultaCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaCadastroActionPerformed
+        // TODO add your handling code here:
+        try {
+            
+            JFrameUsuariosConsulta jFrame;
+            jFrame = new JFrameUsuariosConsulta( null, true, false );
+            jFrame.setVisible(true);
+            
+        } catch( Exception ex ) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+    }//GEN-LAST:event_jMenuItemConsultaCadastroActionPerformed
+
+    private void jMenuItemConsultaAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaAnimalActionPerformed
+        // TODO add your handling code here:
+        try {
+            
+            JFrameAnimaisConsulta jFrame;
+            jFrame = new JFrameAnimaisConsulta( null, true, false );
+            jFrame.setVisible(true);
+            
+        } catch( Exception ex ) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+    }//GEN-LAST:event_jMenuItemConsultaAnimalActionPerformed
+
+    private void jMenuConsultaDoacoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsultaDoacoesActionPerformed
+        // TODO add your handling code here:
+        try {
+            
+            JFrameDoacoesConsulta jFrame;
+            jFrame = new JFrameDoacoesConsulta( null, true, false );
+            jFrame.setVisible(true);
+            
+        } catch( Exception ex ) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+    }//GEN-LAST:event_jMenuConsultaDoacoesActionPerformed
+
+    private void jMenuItemConsultaAdotantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaAdotantesActionPerformed
+        // TODO add your handling code here:
+        try {
+            
+            JFrameAdotantesConsulta jFrame;
+            jFrame = new JFrameAdotantesConsulta( null, true, false );
+            jFrame.setVisible(true);
+            
+        } catch( Exception ex ) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+    }//GEN-LAST:event_jMenuItemConsultaAdotantesActionPerformed
+
+    private void jMenuItemConsultaAdocoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaAdocoesActionPerformed
+        // TODO add your handling code here:
+        try {
+            
+            JFrameAdocoesConsulta jFrame;
+            jFrame = new JFrameAdocoesConsulta( null, true, false );
+            jFrame.setVisible(true);
+            
+        } catch( Exception ex ) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+    }//GEN-LAST:event_jMenuItemConsultaAdocoesActionPerformed
+
+    private void jMenuItemConsultaDoadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaDoadoresActionPerformed
+        // TODO add your handling code here:
+        try {
+            
+            JFrameDoadoresConsulta jFrame;
+            jFrame = new JFrameDoadoresConsulta( null, true, false );
+            jFrame.setVisible(true);
+            
+        } catch( Exception ex ) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+    }//GEN-LAST:event_jMenuItemConsultaDoadoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -248,11 +435,18 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonLogin;
+    private javax.swing.JLabel jLabelBemVindo;
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelUsuario;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenuAdministrativo;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuConsultaDoacoes;
+    private javax.swing.JMenu jMenuFuncionario;
+    private javax.swing.JMenuItem jMenuItemConsultaAdocoes;
+    private javax.swing.JMenuItem jMenuItemConsultaAdotantes;
+    private javax.swing.JMenuItem jMenuItemConsultaAnimal;
+    private javax.swing.JMenuItem jMenuItemConsultaCadastro;
+    private javax.swing.JMenuItem jMenuItemConsultaDoadores;
     private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JMenu jMenuUsuario;
     private javax.swing.JPanel jPanelLogin;

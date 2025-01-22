@@ -211,7 +211,7 @@ public class JFrameDoadoresCRUD extends javax.swing.JFrame {
     
     private void dataDown() throws Exception{
         
-        doadores.setId( Integer.valueOf( jTextFieldID.getText() ) );
+        doadores.setIdd( Integer.valueOf( jTextFieldID.getText() ) );
         
         if( jTextFieldNome.getText().isEmpty() ) {
             doadores.setNome(null);
@@ -235,7 +235,7 @@ public class JFrameDoadoresCRUD extends javax.swing.JFrame {
     
     private void dataUp(){
         
-        jTextFieldID.setText( String.valueOf( doadores.getId() ) );
+        jTextFieldID.setText( String.valueOf( doadores.getIdd() ) );
         
         jTextFieldNome.setText( doadores.getNome() );
         

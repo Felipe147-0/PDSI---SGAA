@@ -87,7 +87,8 @@ public class JFrameUsuariosCRUD extends javax.swing.JFrame {
             }
 
             usuarios.setTipoUsuario(TipoUsuarioEnum.valueOf( grupoTipoUsuario.getSelection().getActionCommand()) );
-            System.out.println("");
+            //System.out.println("");
+          
         }
     
         private void dataUp() {
@@ -99,7 +100,11 @@ public class JFrameUsuariosCRUD extends javax.swing.JFrame {
 
             jPasswordFieldSenha.setText( usuarios.getSenha());
             
-            
+            if (usuarios.getTipoUsuario() == TipoUsuarioEnum.ADMINISTRADOR) {
+                jRadioButtonAdministrador.setSelected(true);
+            } else if (usuarios.getTipoUsuario() == TipoUsuarioEnum.FUNCIONARIO) {
+                jRadioButtonFuncionario.setSelected(true);
+            }
         }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -301,15 +306,7 @@ public class JFrameUsuariosCRUD extends javax.swing.JFrame {
 
     private void jRadioButtonFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonFuncionarioActionPerformed
         // TODO add your handling code here:
-        if( disconnectOnClose ) {
-            System.out.println("Desconectar BD.");
-            try {
-                usuarios.disconnectFromDatabase();
-            } catch(SQLException ex) {
-                LogTrack.getInstance().adicionarLog(ex, true, this);
-            }
-                    
-        }
+        
     }//GEN-LAST:event_jRadioButtonFuncionarioActionPerformed
 
     /**

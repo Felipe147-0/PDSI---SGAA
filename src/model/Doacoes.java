@@ -122,14 +122,14 @@ public class Doacoes extends DataAccessObject {
         } else {
             if( this.doadores == null ) {
                 this.doadores = new Doadores();
-                this.doadores.setId( doadores.getId() );
+                this.doadores.setIdd( doadores.getIdd() );
                 this.doadores.load();
-                addChange( "doadores_id", this.doadores.getId() );
+                addChange( "doadores_id", this.doadores.getIdd() );
             } else {
                 if( !doadores.equals( this.doadores ) ) { // é precriso fazer um @Override do método equals na classe Doadores
-                    this.doadores.setId( doadores.getId() );
+                    this.doadores.setIdd( doadores.getIdd() );
                     this.doadores.load();
-                    addChange( "doadores_id", this.doadores.getId() );
+                    addChange( "doadores_id", this.doadores.getIdd() );
                 }
             }
         }
@@ -138,7 +138,18 @@ public class Doacoes extends DataAccessObject {
     
     @Override
     protected String getWhereClauseForOneEntry() {
-        return " id = " + this.id;
+        //return " id = " + this.id;  
+        StringBuilder whereClause = new StringBuilder("id = " + this.id);
+
+    if (this.doadores != null && this.doadores.getIdd() > 0) {
+        whereClause.append(" AND doadores_id = ").append(this.doadores.getIdd());
+    }
+
+    if (this.tipoDoacao != null && !this.tipoDoacao.isEmpty()) {
+        whereClause.append(" AND tipo_doacao = '").append(this.tipoDoacao).append("'");
+    }
+
+    return whereClause.toString();
     }
 
     @Override
@@ -160,8 +171,7 @@ public class Doacoes extends DataAccessObject {
         
         if( data.get(5) != null ) {
             doadores = new Doadores();
-            
-            doadores.setId( (int) data.get(5) );
+            doadores.setIdd( (int) data.get(5) );
             doadores.load();                                 
         } else {
             doadores = null;

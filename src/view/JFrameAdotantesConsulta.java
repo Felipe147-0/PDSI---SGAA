@@ -25,7 +25,7 @@ public class JFrameAdotantesConsulta extends javax.swing.JFrame {
     private boolean disconnectOnClose;    
     private boolean selection;
     
-    private String query = "SELECT id as ID, nome as Nome, cpf as CPF, telefone as Telefone, endereco as endereco FROM adotantes";
+    private String query = "SELECT id as ID, nome as Nome, cpf as CPF, telefone as Telefone, endereco as Endereco FROM adotantes";
     
     private ResultSetTableModel result;
     private final TableRowSorter< TableModel > filter; 

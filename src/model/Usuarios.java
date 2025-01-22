@@ -61,7 +61,10 @@ public class Usuarios extends DataAccessObject {
     //setter
     
     public void setTipoUsuario(TipoUsuarioEnum tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
+        if (this.tipoUsuario != tipoUsuario) {
+            this.tipoUsuario = tipoUsuario;
+            addChange("tipo_usuario", tipoUsuario.name());
+        }
     }
 
     public void setId(int id) {
@@ -133,7 +136,11 @@ public class Usuarios extends DataAccessObject {
         if( data.get(3) == null) senha = null;
         else senha = (String) data.get(3);
         
-        
+        if (data.get(4) == null) {
+            tipoUsuario = null;
+        } else {
+            tipoUsuario = TipoUsuarioEnum.valueOf((String) data.get(4).toString().toUpperCase());
+        }
     }
     
 }

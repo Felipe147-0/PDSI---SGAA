@@ -30,14 +30,14 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
+                  <Component id="jScrollPane1" alignment="0" pref="917" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabelFiltro" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTextFieldFiltro" min="-2" pref="200" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButtonFiltrar" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace pref="90" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jButtonSelecionar" min="-2" pref="100" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButtonAlterar" min="-2" pref="100" max="-2" attributes="0"/>
@@ -71,7 +71,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabelFiltro">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Filtro:"/>
+        <Property name="text" type="java.lang.String" value="Filtrar:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldFiltro">

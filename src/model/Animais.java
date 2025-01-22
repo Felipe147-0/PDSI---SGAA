@@ -21,25 +21,19 @@ public class Animais extends DataAccessObject{
     private SexoEnum sexo;
     private String saude;
     private String dataEntrada;
-    private boolean disponivelAdocao;
+    private String disponivelAdocao;
 
+    
     public Animais() {
         super("animais");
     }
 
-    public void setSexo(SexoEnum sexo) {
-        this.sexo = sexo;
-    }
-
-    public void setDisponivelAdocao(boolean disponivelAdocao) {
-        this.disponivelAdocao = disponivelAdocao;
-    }
-
+    
     public SexoEnum getSexo() {
         return sexo;
     }
 
-    public boolean isDisponivelAdocao() {
+    public String getDisponivelAdocao() {
         return disponivelAdocao;
     }
 
@@ -73,8 +67,9 @@ public class Animais extends DataAccessObject{
         return dataEntrada;
     }
 
-    
+    //setters
 
+    
     public void setId(int id) {
         if( id != this.id ){
             this.id = id;
@@ -122,9 +117,7 @@ public class Animais extends DataAccessObject{
                 addChange("idade", this.idade);
             }
         }
-    }
-
-    
+    }   
 
     public void setSaude(String saude) {
         if(this.saude != saude){
@@ -134,13 +127,46 @@ public class Animais extends DataAccessObject{
     }
 
     public void setDataEntrada(String dataEntrada) {
-        if(this.dataEntrada != dataEntrada){
-            this.dataEntrada = dataEntrada;
-            addChange("data_entrada", this.dataEntrada);
+//        if(this.dataEntrada != dataEntrada){
+//            this.dataEntrada = dataEntrada;
+//            addChange("data_entrada", this.dataEntrada);
+//        }
+
+           if( dataEntrada == null ) {
+            if( this.dataEntrada != null ) {
+                this.dataEntrada = dataEntrada;
+                addChange("data_entrada", null);
+            }
+        } else {
+            if( !dataEntrada.equals(this.dataEntrada) ) {
+                this.dataEntrada = dataEntrada;
+                addChange("data_entrada", this.dataEntrada);
+            }
         }
     }
 
-    
+    public void setSexo(SexoEnum sexo) {
+        if (this.sexo != sexo) {
+            this.sexo = sexo;
+            addChange("sexo", sexo.name());
+        }
+           
+    }
+
+    public void setDisponivelAdocao(String disponivelAdocao) {
+       // this.disponivelAdocao = disponivelAdocao;
+        if( disponivelAdocao == null ) {
+            if( this.disponivelAdocao != null ) {
+                this.disponivelAdocao = disponivelAdocao;
+                addChange("disponivel_adocao", null);
+            }
+        } else {
+            if( !disponivelAdocao.equals(this.disponivelAdocao) ) {
+                this.disponivelAdocao = disponivelAdocao;
+                addChange("disponivel_adocao", this.disponivelAdocao);
+            }
+        }
+    }
     
 
     @Override
@@ -165,15 +191,24 @@ public class Animais extends DataAccessObject{
         if( data.get(4) == null) idade = null;
         else idade = (String) data.get(4);
         
-        sexo = (SexoEnum) data.get(5);
-        
+//        sexo = (SexoEnum) data.get(5);
+//        if (data.get(5) == null) sexo = null;
+//        else sexo = (SexoEnum) data.get(5);
+
+        if (data.get(5) == null) {
+            sexo = null;
+        } else {
+            sexo = SexoEnum.valueOf((String) data.get(5).toString().toUpperCase());
+        }
+      
         if( data.get(6) == null) saude = null;
         else saude = (String) data.get(6);
         
         if( data.get(7) == null) dataEntrada = null;
-        else dataEntrada = (String) data.get(7);
+        else dataEntrada = (String) data.get(7).toString();
         
-        disponivelAdocao = (Boolean) data.get(8);
+        if( data.get(8) == null) disponivelAdocao = null;
+        else disponivelAdocao = (String) data.get(8);
     }
     
     @Override

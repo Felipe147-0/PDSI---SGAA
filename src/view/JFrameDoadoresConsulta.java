@@ -195,7 +195,7 @@ public class JFrameDoadoresConsulta extends javax.swing.JFrame {
             int id = (int) jTableConsulta.getValueAt(row, 0);
             
             Doadores doadores = new Doadores();
-            doadores.setId(id);
+            doadores.setIdd(id);
             
             try {
                 
@@ -235,7 +235,7 @@ public class JFrameDoadoresConsulta extends javax.swing.JFrame {
             
             int id = (int) jTableConsulta.getValueAt(row, 0);
             
-            doadores.setId(id); 
+            doadores.setIdd(id); 
             
             try {                
                 doadores.load();                
