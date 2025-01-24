@@ -42,10 +42,7 @@ public class Adotantes extends DataAccessObject{
     public String getEndereco() {
         return endereco;
     }
-
-    
-    
-    
+  
     public void setId(int id) {
          if( id != this.id ){
             this.id = id;

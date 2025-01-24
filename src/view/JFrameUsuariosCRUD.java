@@ -43,6 +43,7 @@ public class JFrameUsuariosCRUD extends javax.swing.JFrame {
                 jTextFieldID.setEnabled(false);
             }
         }
+    
         private void checkInput() throws Exception{
 
             if( jTextFieldID.getText().isEmpty() ) {

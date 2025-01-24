@@ -55,9 +55,7 @@ public class Animais extends DataAccessObject{
 
     public String getIdade() {
         return idade;
-    }
-
-    
+    } 
 
     public String getSaude() {
         return saude;
@@ -127,12 +125,8 @@ public class Animais extends DataAccessObject{
     }
 
     public void setDataEntrada(String dataEntrada) {
-//        if(this.dataEntrada != dataEntrada){
-//            this.dataEntrada = dataEntrada;
-//            addChange("data_entrada", this.dataEntrada);
-//        }
 
-           if( dataEntrada == null ) {
+        if( dataEntrada == null ) {
             if( this.dataEntrada != null ) {
                 this.dataEntrada = dataEntrada;
                 addChange("data_entrada", null);
@@ -190,10 +184,6 @@ public class Animais extends DataAccessObject{
         
         if( data.get(4) == null) idade = null;
         else idade = (String) data.get(4);
-        
-//        sexo = (SexoEnum) data.get(5);
-//        if (data.get(5) == null) sexo = null;
-//        else sexo = (SexoEnum) data.get(5);
 
         if (data.get(5) == null) {
             sexo = null;

@@ -230,7 +230,8 @@ public class JFrameDoadoresCRUD extends javax.swing.JFrame {
         } else {
             doadores.setTelefone( jTextFieldTelefone.getText() );
         }
-            
+        
+        
     }
     
     private void dataUp(){
@@ -242,6 +243,8 @@ public class JFrameDoadoresCRUD extends javax.swing.JFrame {
         jTextFieldCpf.setText( doadores.getCpf() );
         
         jTextFieldTelefone.setText( doadores.getTelefone() );
+        
+        
         
     }
     

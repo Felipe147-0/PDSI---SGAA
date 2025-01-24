@@ -10,6 +10,8 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import model.Adocoes;
+import model.Adotantes;
+import model.Animais;
 
 /**
  *
@@ -18,6 +20,8 @@ import model.Adocoes;
 public class JFrameAdocoesCRUD extends javax.swing.JFrame {
     
     private Adocoes adocoes;
+    private Adotantes adotantes;  //aqui
+    private Animais animais;      //aqui
     private boolean disconnectOnClose;
     
     /**
@@ -57,6 +61,8 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
         jTextFieldAdotantesId = new javax.swing.JTextField();
         jButtonExcluir = new javax.swing.JButton();
         jButtonSalvar = new javax.swing.JButton();
+        jButtonSelecionarAnimal = new javax.swing.JButton();
+        jButtonSelecionarAdotante = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Adoçoes CRUD");
@@ -84,6 +90,7 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
 
         jLabelAnimalId.setText("ID Animal:");
 
+        jTextFieldAnimalId.setEditable(false);
         jTextFieldAnimalId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAnimalIdActionPerformed(evt);
@@ -92,6 +99,7 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
 
         jLabelAdotantesId.setText("ID Adotantes:");
 
+        jTextFieldAdotantesId.setEditable(false);
         jTextFieldAdotantesId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAdotantesIdActionPerformed(evt);
@@ -112,35 +120,56 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
             }
         });
 
+        jButtonSelecionarAnimal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/search-icon.png"))); // NOI18N
+        jButtonSelecionarAnimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSelecionarAnimalActionPerformed(evt);
+            }
+        });
+
+        jButtonSelecionarAdotante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/search-icon.png"))); // NOI18N
+        jButtonSelecionarAdotante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSelecionarAdotanteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabelAnimalId)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabelID)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabelDataAdocao)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextFieldDataAdocao, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabelAnimalId)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextFieldAnimalId, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabelAdotantesId)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextFieldAdotantesId, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                        .addComponent(jTextFieldAnimalId, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonSelecionarAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabelAdotantesId)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextFieldAdotantesId, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonSelecionarAdotante, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jLabelID)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelDataAdocao)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldDataAdocao, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,17 +181,21 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
                         .addComponent(jLabelDataAdocao)
                         .addComponent(jTextFieldDataAdocao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabelID))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelAnimalId)
-                    .addComponent(jTextFieldAnimalId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelAdotantesId)
-                    .addComponent(jTextFieldAdotantesId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonExcluir)
-                    .addComponent(jButtonSalvar))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabelAnimalId)
+                        .addComponent(jTextFieldAnimalId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldAdotantesId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelAdotantesId))
+                    .addComponent(jButtonSelecionarAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .addComponent(jButtonSelecionarAdotante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonSalvar)
+                    .addComponent(jButtonExcluir))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
@@ -195,30 +228,30 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
             }               
         }
         
-        String data = jTextFieldDataAdocao.getText().trim();
-            if(data.isEmpty()) {
-                throw new Exception("O campo data de adoção não pode estar vazio.");
-            }
-
-            try {
-                LocalDate.parse(data); // Valida a data e o formato
-            } catch (DateTimeParseException e) {
-                throw new Exception("A data de adoção deve estar no formato válido YYYY-MM-DD.");
-            }
-        
-       /* if( !jTextFieldDataAdocao.getText().isEmpty() &&
-               !jTextFieldDataAdocao.getText().matches("\\d{4}-\\d{2}-\\d{2}") ) {
-            throw new Exception("A data de adocao deve estar no padrão YYYY-MM-DD.");
-        }*/
+//        String data = jTextFieldDataAdocao.getText().trim();
+//            if(data.isEmpty()) {
+//                throw new Exception("O campo data de adoção não pode estar vazio.");
+//            }
+//
+//            try {
+//                LocalDate.parse(data); // Valida a data e o formato
+//            } catch (DateTimeParseException e) {
+//                throw new Exception("A data de adoção deve estar no formato válido YYYY-MM-DD.");
+//            }
+           if( jTextFieldDataAdocao.getText().isEmpty() && 
+                !jTextFieldDataAdocao.getText().matches("\\d{4}-\\d{2}-\\d{2}")) {
+              throw new Exception("A Data de Entrada deve ser informada no padrão AAAA-MM-DD!");
+        }
         
     }
     
     private void dataDown() throws Exception{
-        adocoes.setId( Integer.valueOf( jTextFieldID.getText() ) );
-         
-        adocoes.setIdAnimal(Integer.valueOf( jTextFieldAnimalId.getText() ) );
         
-        adocoes.setIdAdotantes(Integer.valueOf( jTextFieldAdotantesId.getText() ) );
+        adocoes.setId( Integer.valueOf( jTextFieldID.getText() ) );
+        
+        adocoes.setIdAdotantes(adotantes);         //aqui
+        
+        adocoes.setIdAnimal(animais);
        
         if( jTextFieldDataAdocao.getText().isEmpty() ) {
             adocoes.setDataAdocao(null);
@@ -230,8 +263,9 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
     private void dataUp(){
         jTextFieldID.setText( String.valueOf( adocoes.getId() ) );
         
-        jTextFieldAnimalId.setText( String.valueOf( adocoes.getId() ) );
-        
+        if(adocoes.getIdAnimal() != null){
+            jTextFieldAnimalId.setText( String.valueOf( adocoes.getId() ) );
+        }
         jTextFieldAdotantesId.setText( String.valueOf( adocoes.getId()) );
         
         jTextFieldDataAdocao.setText(  adocoes.getDataAdocao() );
@@ -301,6 +335,58 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldAdotantesIdActionPerformed
 
+    private void jButtonSelecionarAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarAnimalActionPerformed
+        // TODO add your handling code here:
+        try {
+            if (animais == null) {
+                animais = new Animais();
+            }
+
+            JFrameAnimaisConsulta jFrameConsulta;
+            jFrameConsulta = new JFrameAnimaisConsulta(animais, false, true);
+
+            jFrameConsulta.addWindowListener(new java.awt.event.WindowAdapter() {
+                @Override
+                public void windowClosed(java.awt.event.WindowEvent evt) {
+                    // Atualiza o campo com o ID do doador selecionado
+                    jTextFieldAnimalId.setText(String.valueOf(animais.getId())); // Use getId() para obter o ID
+                }
+            });
+
+            jFrameConsulta.setVisible(true);
+
+        } catch (Exception ex) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+
+    }//GEN-LAST:event_jButtonSelecionarAnimalActionPerformed
+
+    private void jButtonSelecionarAdotanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarAdotanteActionPerformed
+        // TODO add your handling code here:
+        try {
+            if (adotantes == null) {
+                adotantes = new Adotantes();
+            }
+
+            JFrameAdotantesConsulta jFrameConsulta;
+            jFrameConsulta = new JFrameAdotantesConsulta(adotantes, false, true);
+
+            jFrameConsulta.addWindowListener(new java.awt.event.WindowAdapter() {
+                @Override
+                public void windowClosed(java.awt.event.WindowEvent evt) {
+                    // Atualiza o campo com o ID do doador selecionado
+                    jTextFieldAdotantesId.setText(String.valueOf(adotantes.getId())); // Use getId() para obter o ID
+                }
+            });
+
+            jFrameConsulta.setVisible(true);
+
+        } catch (Exception ex) {
+            LogTrack.getInstance().adicionarLog(ex, true, this);
+        }
+
+    }//GEN-LAST:event_jButtonSelecionarAdotanteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -343,6 +429,8 @@ public class JFrameAdocoesCRUD extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonExcluir;
     private javax.swing.JButton jButtonSalvar;
+    private javax.swing.JButton jButtonSelecionarAdotante;
+    private javax.swing.JButton jButtonSelecionarAnimal;
     private javax.swing.JLabel jLabelAdotantesId;
     private javax.swing.JLabel jLabelAnimalId;
     private javax.swing.JLabel jLabelDataAdocao;

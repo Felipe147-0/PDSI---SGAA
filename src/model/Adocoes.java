@@ -15,16 +15,8 @@ public class Adocoes extends DataAccessObject{
     
     private int id;
     private String dataAdocao;
-    private int idAnimal; //int idAnimal
-    private int idAdotantes;
-
-    public int getIdAnimal() {
-        return idAnimal;
-    }
-
-    public int getIdAdotantes() {
-        return idAdotantes;
-    }
+    private Animais idAnimal; 
+    private Adotantes idAdotantes;
 
     public Adocoes() {
         super("adocoes");
@@ -37,18 +29,16 @@ public class Adocoes extends DataAccessObject{
     public String getDataAdocao() {
         return dataAdocao;
     }
-    /*
-    public Animais getAnimais() {
-        return animais;
+
+    public Animais getIdAnimal() {
+        return idAnimal;
     }
 
-    public Adotantes getAdotantes() {
-        return adotantes;
+    public Adotantes getIdAdotantes() {
+        return idAdotantes;
     }
-    */
-    
-    
-    //setter
+     
+    //setters
 
     public void setId(int id) {
         if( id != this.id ){
@@ -71,62 +61,52 @@ public class Adocoes extends DataAccessObject{
         }
     }
 
-    public void setIdAnimal(int idAnimal) {
-        this.idAnimal = idAnimal;
-        
-    }
-
-    public void setIdAdotantes(int idAdotantes) {
-        this.idAdotantes = idAdotantes;
-    }
-    
-    /*
-    public void setAnimais(Animais animais) throws Exception{
-        
-        if( animais == null ) {
-            if( this.animais != null ) {
-                this.animais = animais;
+    public void setIdAnimal(Animais idAnimal) throws Exception {
+        //this.idAnimal = idAnimal;
+        if( idAnimal == null ) {
+            if( this.idAnimal != null ) {
+                this.idAnimal = idAnimal;
                 addChange("animais_id", null);
             }
         } else {
-            if( this.animais == null ) {
-                this.animais = new Animais();
-                this.animais.setId( animais.getId() );
-                this.animais.load();
-                addChange( "animais_id", this.animais.getId() );
+            if( this.idAnimal == null ) {
+                this.idAnimal = new Animais();
+                this.idAnimal.setId( idAnimal.getId() );
+                this.idAnimal.load();
+                addChange( "animais_id", this.idAnimal.getId() );
             } else {
-                if( !animais.equals( this.animais ) ) { // é precriso fazer um @Override do método equals na classe animais
-                    this.animais.setId( animais.getId() );
-                    this.animais.load();
-                    addChange( "animais_id", this.animais.getId() );
-                }
-            }
-        }
-        
-    }*/
-    /*
-    public void setAdotantes(Adotantes adotantes) throws Exception{
-        if( adotantes == null ) {
-            if( this.adotantes != null ) {
-                this.adotantes = adotantes;
-                addChange("adotantes_id", null);
-            }
-        } else {
-            if( this.adotantes == null ) {
-                this.adotantes = new Adotantes();
-                this.adotantes.setId( adotantes.getId() );
-                this.adotantes.load();
-                addChange( "adotantes_id", this.adotantes.getId() );
-            } else {
-                if( !adotantes.equals( this.adotantes ) ) { // é precriso fazer um @Override do método equals na classe Adotantes
-                    this.adotantes.setId( adotantes.getId() );
-                    this.adotantes.load();
-                    addChange( "adotantes_id", this.adotantes.getId() );
+                if( !idAnimal.equals( this.idAnimal ) ) { // é precriso fazer um @Override do método equals na classe idAnimal
+                    this.idAnimal.setId( idAnimal.getId() );
+                    this.idAnimal.load();
+                    addChange( "animais_id", this.idAnimal.getId() );
                 }
             }
         }
     }
-    */
+
+    public void setIdAdotantes(Adotantes idAdotantes) throws Exception{
+        //this.idAdotantes = idAdotantes;
+        if( idAdotantes == null ) {
+            if( this.idAdotantes != null ) {
+                this.idAdotantes = idAdotantes;
+                addChange("adotantes_id", null);
+            }
+        } else {
+            if( this.idAdotantes == null ) {
+                this.idAdotantes = new Adotantes();
+                this.idAdotantes.setId( idAdotantes.getId() );
+                this.idAdotantes.load();
+                addChange( "adotantes_id", this.idAdotantes.getId() );
+            } else {
+                if( !idAdotantes.equals( this.idAdotantes ) ) { // é precriso fazer um @Override do método equals na classe Adotantes
+                    this.idAdotantes.setId( idAdotantes.getId() );
+                    this.idAdotantes.load();
+                    addChange( "adotantes_id", this.idAdotantes.getId() );
+                }
+            }
+        }
+    }
+    
     
     @Override
     protected String getWhereClauseForOneEntry() {
@@ -139,29 +119,24 @@ public class Adocoes extends DataAccessObject{
         id = (int) data.get(0);
         
         if( data.get(1) == null) dataAdocao = null;
-        else dataAdocao = (String) data.get(1);
+        else dataAdocao = (String) data.get(1).toString();
        
-        idAnimal = (int) data.get(2);
-        
-        idAdotantes = (int) data.get(3);
-        /*
         if( data.get(2) != null ) {
-            animais = new Animais();
-            animais.setId( (int) data.get(2) );
-            animais.load();                                 
+            idAnimal = new Animais();
+            idAnimal.setId( (int) data.get(2) );
+            idAnimal.load();                                 
         } else {
-            animais = null;
+            idAnimal = null;
         }
         
         if( data.get(3) != null ) {
-            adotantes = new Adotantes();
-            adotantes.setId( (int) data.get(3) );
-            adotantes.load();                                 
+            idAdotantes = new Adotantes();
+            idAdotantes.setId( (int) data.get(3) );
+            idAdotantes.load();                                 
         } else {
-            adotantes = null;
+            idAdotantes = null;
         } 
-        */
+        
     }
-    
-    
+       
 }

@@ -22,22 +22,10 @@ public class Doadores extends DataAccessObject {
     public Doadores() {
         super("doadores");
     }
-
-    
-    
-    
+  
     public Doacoes getDoacoes() {
         return doacoes;
     }
-
-    public void setDoacoes(Doacoes doacoes) {
-        this.doacoes = doacoes;
-    }
-    
-    
-    
-    
-    
 
     public int getIdd() {
         return idd;
@@ -53,6 +41,11 @@ public class Doadores extends DataAccessObject {
 
     public String getTelefone() {
         return telefone;
+    }
+
+    
+    public void setDoacoes(Doacoes doacoes) {
+        this.doacoes = doacoes;
     }
 
     public void setIdd(int idd) {

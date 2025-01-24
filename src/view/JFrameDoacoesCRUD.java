@@ -68,6 +68,7 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
         jLabelDoadoresId = new javax.swing.JLabel();
         jTextFieldDoadoresId = new javax.swing.JTextField();
         jButtonSelecionarDoador = new javax.swing.JButton();
+        jButtonApagarDoadores = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Doaçoes CRUD");
@@ -113,6 +114,7 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
 
         jLabelDoadoresId.setText("Doadores ID:");
 
+        jTextFieldDoadoresId.setEditable(false);
         jTextFieldDoadoresId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldDoadoresIdActionPerformed(evt);
@@ -123,6 +125,13 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
         jButtonSelecionarDoador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSelecionarDoadorActionPerformed(evt);
+            }
+        });
+
+        jButtonApagarDoadores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/eraser-icon.png"))); // NOI18N
+        jButtonApagarDoadores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonApagarDoadoresActionPerformed(evt);
             }
         });
 
@@ -163,7 +172,9 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextFieldDoadoresId, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonSelecionarDoador, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButtonSelecionarDoador, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonApagarDoadores, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -187,7 +198,8 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
                         .addComponent(jTextFieldValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabelDoadoresId)
                         .addComponent(jTextFieldDoadoresId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButtonSelecionarDoador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonSelecionarDoador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonApagarDoadores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelDescricao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -263,38 +275,33 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
                 throw new Exception("O Valor deve ser informado!");
             }
         
-         String data = jTextFieldDataDoacao.getText().trim();
-            if(data.isEmpty()) {
-                throw new Exception("O campo data de adoção não pode estar vazio.");
-            }
+        String data = jTextFieldDataDoacao.getText().trim();
+           if(data.isEmpty()) {
+               throw new Exception("O campo data de adoção não pode estar vazio.");
+           }
 
-            try {
-                LocalDate.parse(data); // Valida a data e o formato
-            } catch (DateTimeParseException e) {
-                throw new Exception("A data de adoção deve estar no formato válido YYYY-MM-DD.");
-            }
-            /*
-        if( !jTextFieldDataDoacao.getText().isEmpty() &&
-               !jTextFieldDataDoacao.getText().matches("\\d{4}-\\d{2}-\\d{2}") ) {
-            throw new Exception("A data de doacao deve estar no padrão DDDD-DD-DD.");
-        }*/
-        
-        if( jTextFieldDoadoresId.getText().isEmpty() ) {
-            throw new Exception("ID do doador deve ser informado!");
-                } else {
-            if( !jTextFieldDoadoresId.getText().matches("\\d+") ) {
-                throw new Exception("ID do doador deve ser um número.");
-                }               
-        }
+           try {
+               LocalDate.parse(data); // Valida a data e o formato
+           } catch (DateTimeParseException e) {
+               throw new Exception("A data de adoção deve estar no formato válido YYYY-MM-DD.");
+           }
+
+
+           if( jTextFieldDoadoresId.getText().isEmpty() ) {
+               throw new Exception("ID do doador deve ser informado!");
+                   } else {
+               if( !jTextFieldDoadoresId.getText().matches("\\d+") ) {
+                   throw new Exception("ID do doador deve ser um número.");
+                   }               
+           }
     }
 
     private void dataDown() throws Exception{
         
         doacoes.setId( Integer.valueOf( jTextFieldID.getText() ) );
         
-        //doacoes.setDoadores(doadores);
-        doadores.setIdd(Integer.valueOf( jTextFieldDoadoresId.getText() ) );
-        
+        doacoes.setDoadores(doadores);
+       
         if( jTextFieldTipoDoacao.getText().isEmpty() ) {
                 doacoes.setTipoDoacao(null);
             } else {
@@ -326,8 +333,7 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
         jTextFieldID.setText( String.valueOf( doacoes.getId() ) );
         
         jTextFieldDoadoresId.setText( String.valueOf( doadores.getIdd() ) );
-         
-        
+          
         jTextFieldTipoDoacao.setText( doacoes.getTipoDoacao() );
         
         jTextAreaDescricao.setText( doacoes.getDescricao() );
@@ -382,6 +388,12 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButtonSelecionarDoadorActionPerformed
 
+    private void jButtonApagarDoadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonApagarDoadoresActionPerformed
+        // TODO add your handling code here:
+        doadores = null;
+        jTextFieldDoadoresId.setText(null);
+    }//GEN-LAST:event_jButtonApagarDoadoresActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -422,6 +434,7 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonApagarDoadores;
     private javax.swing.JButton jButtonExcluir;
     private javax.swing.JButton jButtonSalvar;
     private javax.swing.JButton jButtonSelecionarDoador;

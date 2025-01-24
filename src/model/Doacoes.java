@@ -25,6 +25,7 @@ public class Doacoes extends DataAccessObject {
     public Doacoes() {
         super("doacoes");
     }
+    
 
     public int getId() {
         return id;
@@ -49,6 +50,7 @@ public class Doacoes extends DataAccessObject {
     public Doadores getDoadores() {
         return doadores;
     }
+    
     
     public void setId(int id) {
         if( id != this.id ) {
@@ -138,18 +140,7 @@ public class Doacoes extends DataAccessObject {
     
     @Override
     protected String getWhereClauseForOneEntry() {
-        //return " id = " + this.id;  
-        StringBuilder whereClause = new StringBuilder("id = " + this.id);
-
-    if (this.doadores != null && this.doadores.getIdd() > 0) {
-        whereClause.append(" AND doadores_id = ").append(this.doadores.getIdd());
-    }
-
-    if (this.tipoDoacao != null && !this.tipoDoacao.isEmpty()) {
-        whereClause.append(" AND tipo_doacao = '").append(this.tipoDoacao).append("'");
-    }
-
-    return whereClause.toString();
+        return " id = " + this.id;  
     }
 
     @Override
@@ -175,10 +166,6 @@ public class Doacoes extends DataAccessObject {
             doadores.load();                                 
         } else {
             doadores = null;
-        } 
-        
-        
-    }
-    
-    
+        }       
+    }    
 }
