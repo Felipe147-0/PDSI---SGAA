@@ -1,0 +1,6 @@
+***ATENÇAO***
+
+porta 3306 caso precise alterar no app-config!
+
+criar um novo usuario primeiramente atraves da janela "Usuarios CRUD" em "view"
+a partir dai utilizar a janela principal.

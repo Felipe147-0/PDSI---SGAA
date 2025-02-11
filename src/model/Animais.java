@@ -22,13 +22,11 @@ public class Animais extends DataAccessObject{
     private String saude;
     private String dataEntrada;
     private String disponivelAdocao;
-
     
     public Animais() {
         super("animais");
     }
 
-    
     public SexoEnum getSexo() {
         return sexo;
     }

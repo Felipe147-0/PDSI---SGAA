@@ -195,14 +195,20 @@ public class JFrameAdotantesCRUD extends javax.swing.JFrame {
             throw new Exception("O Nome deve ser informado!");
         }
         
-        if( !jTextFieldCpf.getText().isEmpty() &&
-               !jTextFieldCpf.getText().matches("\\d{3}.\\d{3}.\\d{3}-\\d{2}") ) {
-            throw new Exception("O CPF deve estar no padrão DDD.DDD.DDD-DD.");
+        if( jTextFieldCpf.getText().isEmpty() ){
+                throw new Exception("CPF deve ser informado!");
+        } else {        
+            if(!jTextFieldCpf.getText().matches("\\d{3}.\\d{3}.\\d{3}-\\d{2}") ) {
+                throw new Exception("O CPF deve estar no padrão DDD.DDD.DDD-DD.");
+            }    
         }
         
-        if( !jTextFieldTelefone.getText().isEmpty() &&
-               !jTextFieldTelefone.getText().matches("\\(\\d{2}\\)\\d{4,5}-\\d{4}") ) {
-            throw new Exception("O telefone deve estar no padrão (99)99999-9999.");
+        if( jTextFieldTelefone.getText().isEmpty() ){
+                throw new Exception("Telefone deve ser informado!");
+        } else {        
+            if(!jTextFieldTelefone.getText().matches("\\(\\d{2}\\)\\d{4,5}-\\d{4}") ) {
+                throw new Exception("O telefone deve estar no padrão (99)99999-9999.");
+            }
         }
         
          if( jTextFieldEndereco.getText().isEmpty() ) {
@@ -212,7 +218,7 @@ public class JFrameAdotantesCRUD extends javax.swing.JFrame {
     
     private void dataUp() {
         
-        jTextFieldID.setText( String.valueOf( adotantes.getId() ) );
+        jTextFieldID.setText( String.valueOf( adotantes.getId_a() ) );
         
         jTextFieldNome.setText( adotantes.getNome() );
         
@@ -226,7 +232,7 @@ public class JFrameAdotantesCRUD extends javax.swing.JFrame {
 
     private void dataDown() {
         
-        adotantes.setId( Integer.valueOf( jTextFieldID.getText() ) );
+        adotantes.setId_a( Integer.valueOf( jTextFieldID.getText() ) );
         
         if( jTextFieldNome.getText().isEmpty() ) {
             adotantes.setNome(null);

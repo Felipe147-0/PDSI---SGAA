@@ -94,14 +94,14 @@ public class Adocoes extends DataAccessObject{
         } else {
             if( this.idAdotantes == null ) {
                 this.idAdotantes = new Adotantes();
-                this.idAdotantes.setId( idAdotantes.getId() );
+                this.idAdotantes.setId_a( idAdotantes.getId_a() );
                 this.idAdotantes.load();
-                addChange( "adotantes_id", this.idAdotantes.getId() );
+                addChange( "adotantes_id", this.idAdotantes.getId_a() );
             } else {
                 if( !idAdotantes.equals( this.idAdotantes ) ) { // é precriso fazer um @Override do método equals na classe Adotantes
-                    this.idAdotantes.setId( idAdotantes.getId() );
+                    this.idAdotantes.setId_a( idAdotantes.getId_a() );
                     this.idAdotantes.load();
-                    addChange( "adotantes_id", this.idAdotantes.getId() );
+                    addChange( "adotantes_id", this.idAdotantes.getId_a() );
                 }
             }
         }
@@ -131,7 +131,7 @@ public class Adocoes extends DataAccessObject{
         
         if( data.get(3) != null ) {
             idAdotantes = new Adotantes();
-            idAdotantes.setId( (int) data.get(3) );
+            idAdotantes.setId_a( (int) data.get(3) );
             idAdotantes.load();                                 
         } else {
             idAdotantes = null;

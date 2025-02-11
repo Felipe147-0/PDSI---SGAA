@@ -332,7 +332,9 @@ public class JFrameDoacoesCRUD extends javax.swing.JFrame {
      
         jTextFieldID.setText( String.valueOf( doacoes.getId() ) );
         
-        jTextFieldDoadoresId.setText( String.valueOf( doadores.getIdd() ) );
+        if(doacoes.getDoadores()!= null){
+            jTextFieldDoadoresId.setText( String.valueOf( doacoes.getDoadores().getIdd()) );
+        }
           
         jTextFieldTipoDoacao.setText( doacoes.getTipoDoacao() );
         

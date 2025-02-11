@@ -74,8 +74,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuAdministrativo = new javax.swing.JMenu();
         jMenuItemConsultaCadastro = new javax.swing.JMenuItem();
-        jMenuConsultaDoacoes = new javax.swing.JMenuItem();
         jMenuItemConsultaDoadores = new javax.swing.JMenuItem();
+        jMenuConsultaDoacoes = new javax.swing.JMenuItem();
         jMenuFuncionario = new javax.swing.JMenu();
         jMenuItemConsultaAnimal = new javax.swing.JMenuItem();
         jMenuItemConsultaAdotantes = new javax.swing.JMenuItem();
@@ -152,14 +152,6 @@ public class JFramePrincipal extends javax.swing.JFrame {
         });
         jMenuAdministrativo.add(jMenuItemConsultaCadastro);
 
-        jMenuConsultaDoacoes.setText("Consulta Doações");
-        jMenuConsultaDoacoes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuConsultaDoacoesActionPerformed(evt);
-            }
-        });
-        jMenuAdministrativo.add(jMenuConsultaDoacoes);
-
         jMenuItemConsultaDoadores.setText("Consulta Doadores");
         jMenuItemConsultaDoadores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,6 +159,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
         jMenuAdministrativo.add(jMenuItemConsultaDoadores);
+
+        jMenuConsultaDoacoes.setText("Consulta Doações");
+        jMenuConsultaDoacoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuConsultaDoacoesActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuConsultaDoacoes);
 
         jMenuBar1.add(jMenuAdministrativo);
 

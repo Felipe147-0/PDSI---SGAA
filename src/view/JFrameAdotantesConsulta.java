@@ -193,7 +193,7 @@ public class JFrameAdotantesConsulta extends javax.swing.JFrame {
             
             int id = (int) jTableConsulta.getValueAt(row, 0);
             
-            adotantes.setId(id); // 
+            adotantes.setId_a(id); // 
             
             try {                
                 adotantes.load();                
@@ -216,7 +216,7 @@ public class JFrameAdotantesConsulta extends javax.swing.JFrame {
             int id = (int) jTableConsulta.getValueAt(row, 0);
 
             Adotantes adotantes = new Adotantes();
-            adotantes.setId(id);
+            adotantes.setId_a(id);
 
             try {
 

@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Adotantes extends DataAccessObject{
     
-    private int id;
+    private int id_a;
     private String nome;
     private String cpf;
     private String telefone;
@@ -23,8 +23,8 @@ public class Adotantes extends DataAccessObject{
         super("adotantes");
     }
 
-    public int getId() {
-        return id;
+    public int getId_a() {
+        return id_a;
     }
 
     public String getNome() {
@@ -43,10 +43,10 @@ public class Adotantes extends DataAccessObject{
         return endereco;
     }
   
-    public void setId(int id) {
-         if( id != this.id ){
-            this.id = id;
-            addChange("id", this.id);
+    public void setId_a(int id_a) {
+         if( id_a != this.id_a ){
+            this.id_a = id_a;
+            addChange("id", this.id_a);
         }
     }
 
@@ -102,12 +102,12 @@ public class Adotantes extends DataAccessObject{
 
     @Override
     protected String getWhereClauseForOneEntry() {
-         return " id = " + this.id;
+         return " id = " + this.id_a;
     }
 
     @Override
     protected void fill(ArrayList<Object> data) {
-        id = (int) data.get(0);
+        id_a = (int) data.get(0);
          
         if( data.get(1) == null) nome = null;
         else nome = (String) data.get(1);
@@ -127,7 +127,7 @@ public class Adotantes extends DataAccessObject{
         if( obj instanceof Adotantes ) {
             Adotantes aux = (Adotantes) obj;
             
-            if( getId() == aux.getId() ) {
+            if( getId_a() == aux.getId_a() ) {
                 return true;
             } else {
                 return false;
